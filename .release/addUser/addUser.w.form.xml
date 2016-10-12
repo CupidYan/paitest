@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cUvY3au" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cUvY3au" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/bootstrap/panel/panel,$model/UI2/system/components/justep/labelEdit/labelEdit,$model/UI2/system/components/justep/panel/panel,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cUvY3au" class="cUvY3au"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc622c60a095e43209a60a0647409c0d1-iosstatusbar cUvY3au" xid="panel2" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cUvY3au"> 
+    <div class="x-panel-content cUvY3au" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cUvY3au">
+      <div class="panel panel-default cUvY3au" component="$model/UI2/system/components/bootstrap/panel/panel" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/panel/panel'}" __cid="cUvY3au"> 
+        <div class="panel-body cUvY3au" xid="body1" __cid="cUvY3au">
+          <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cUvY3au" xid="labelEdit1" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cUvY3au"> 
+            <label class="x-label cUvY3au" xid="label1" bind-text="$model.userData.label(&quot;user_id&quot;)" __cid="cUvY3au"/>  
+            <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit cUvY3au" xid="input1" data-bind="component:{ref:$model.userData.ref(&quot;user_id&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;placeHolder&quot;:&quot;员工编号&quot;}" __cid="cUvY3au"/>
+          </div>  
+          <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cUvY3au" xid="labelEdit2" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cUvY3au"> 
+            <label class="x-label cUvY3au" xid="label2" bind-text="$model.userData.label(&quot;user_name&quot;)" __cid="cUvY3au"/>  
+            <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit cUvY3au" xid="input2" data-bind="component:{ref:$model.userData.ref(&quot;user_name&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;placeHolder&quot;:&quot;员工姓名&quot;}" __cid="cUvY3au"/>
+          </div>  
+          <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cUvY3au" xid="labelEdit8" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cUvY3au"> 
+            <label class="x-label cUvY3au" xid="label8" bind-text="$model.userData.label(&quot;user_sex&quot;)" __cid="cUvY3au"/>  
+            <select component="$model/UI2/system/components/justep/select/select" bind-optionsCaption="'请选择性别...'" class="form-control x-edit cUvY3au" xid="sexselect1" bind-options="availableSex" bind-optionsAfterRender2="$model.__justep__.selectOptionsAfterRender.bind($model,$element)" bind-optionsBeforeRender="$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" data-bind="component:{ref:$model.userData.ref(&quot;user_sex&quot;),name:'$model/UI2/system/components/justep/select/select'}" __cid="cUvY3au"/>
+          </div>  
+          <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30 cUvY3au" xid="labelEdit5" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cUvY3au"> 
+            <label class="x-label cUvY3au" xid="label5" bind-text="$model.userData.label(&quot;admin&quot;)" __cid="cUvY3au"/>  
+            <select component="$model/UI2/system/components/justep/select/select" bind-optionsCaption="'请选择权限...'" class="form-control x-edit cUvY3au" xid="select3" bind-options="availableAdmin" bind-optionsAfterRender2="$model.__justep__.selectOptionsAfterRender.bind($model,$element)" bind-optionsBeforeRender="$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" data-bind="component:{ref:$model.userData.ref(&quot;admin&quot;),name:'$model/UI2/system/components/justep/select/select'}" __cid="cUvY3au"/>
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom cUvY3au" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cUvY3au">
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link x-dialog-button cUvY3au" xid="cancel" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:cancelClick" data-config="{&quot;label&quot;:&quot;取消&quot;}" __cid="cUvY3au"> 
+        <i xid="i1" __cid="cUvY3au" class="cUvY3au"/>  
+        <span xid="span1" __cid="cUvY3au" class="cUvY3au">取消</span>
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-primary x-dialog-button cUvY3au" xid="okbtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:okbtnClick" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="cUvY3au"> 
+        <i xid="i2" __cid="cUvY3au" class="cUvY3au"/>  
+        <span xid="span2" __cid="cUvY3au" class="cUvY3au">确定</span>
+      </a>
+    </div>
+    <style __cid="cUvY3au" class="cUvY3au">.x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-top {height: 0px;}.x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-content { top: 0px;bottom: nullpx;}.x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc622c60a095e43209a60a0647409c0d1-iosstatusbar &gt;.x-panel-content {top: 0px;}</style>
+  </div>  
+  <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiverReceive" __cid="cUvY3au" class="cUvY3au"/>
+</div>

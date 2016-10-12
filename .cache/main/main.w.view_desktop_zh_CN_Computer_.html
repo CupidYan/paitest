@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cJZbyQv" title="会议图片" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cJZbyQv" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/attachment/attachmentSimple,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/output/output,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.cJZbyQv{background-color: rgb(57, 58, 62)} .o-img.cJZbyQv{width: 100%; height: 80px} .o-imgList.cJZbyQv{padding: 14px} .o-imgList.cJZbyQv ul.cJZbyQv li.cJZbyQv{padding: 6px} .o-uploadFile.cJZbyQv .x-attachment-content.cJZbyQv{min-height: 48px; min-height: 48px; border-top: 0; background: none; margin-top: 0px} .o-uploadFile.cJZbyQv .x-item-upload.cJZbyQv{width: 48px; height: 48px; background: url(@justepContextPath@/v_c9c2411727bd4c3ca306ce8ebab8ab9bl_zh_CNs_desktopd_pc/paitest/img/upload.png) no-repeat center center} .o-uploadFile.cJZbyQv .x-attachment.cJZbyQv{min-height: 48px; padding: 0} .o-uploadFile.cJZbyQv .x-attachment.cJZbyQv .x-attachment-cell.cJZbyQv{float: none; margin: 0; height: 48px; display: block} .takeout.cJZbyQv .x-col.cJZbyQv{padding: 0px} .takeout.cJZbyQv .takeout-list-row.cJZbyQv{border-bottom: 1px solid rgb(229, 229, 229)} .takeout.cJZbyQv .x-titlebar.cJZbyQv{background-color: rgb(53, 179, 228)}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onActive:modelActive;onLoad:modelLoad" __cid="cJZbyQv" class="cJZbyQv"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar cJZbyQv" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cJZbyQv"> 
+    <div class="x-panel-top cJZbyQv" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cJZbyQv"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cJZbyQv" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;会议图片&quot;}" __cid="cJZbyQv"> 
+        <div class="x-titlebar-left cJZbyQv" __cid="cJZbyQv"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cJZbyQv" xid="backBtn1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;window.close&quot;}" data-config="{&quot;icon&quot;:&quot;linear linear-volumehigh&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cJZbyQv"> 
+            <i class="linear linear-volumehigh cJZbyQv" __cid="cJZbyQv"/>  
+            <span __cid="cJZbyQv" class="cJZbyQv"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cJZbyQv" __cid="cJZbyQv">会议图片</div>  
+        <div class="x-titlebar-right  cJZbyQv" __cid="cJZbyQv"> 
+          <div class="empty cJZbyQv" __cid="cJZbyQv"/>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cJZbyQv" xid="setBtn1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:setBtn1Click" data-config="{&quot;icon&quot;:&quot;round round-phone&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cJZbyQv"> 
+            <i xid="i1" class="round round-phone cJZbyQv" __cid="cJZbyQv"/>  
+            <span xid="span1" __cid="cJZbyQv" class="cJZbyQv"/> 
+          </a>  
+          <div component="$model/UI2/system/components/justep/attachment/attachmentSimple" xid="attachmentSimple" class="o-uploadFile cJZbyQv" data-bind="component:{ref:data.ref(&quot;fileName&quot;),name:'$model/UI2/system/components/justep/attachment/attachmentSimple'}" data-config="{&quot;actionUrl&quot;:&quot;/baas/justep/attachment/simpleFileStore&quot;}" __cid="cJZbyQv"> 
+            <div class="x-attachment cJZbyQv" xid="div6" __cid="cJZbyQv"> 
+              <div class="x-attachment-content cJZbyQv" xid="div9" __cid="cJZbyQv"> 
+                <div class="x-attachment-cell cJZbyQv" data-bind="visible:$state.get() == 'upload'" xid="div15" __cid="cJZbyQv"> 
+                  <div class="x-attachment-item x-item-upload cJZbyQv" data-bind="visible:$state.get() == 'upload'" xid="div16" __cid="cJZbyQv"/> 
+                </div>  
+                <div style="clear:both;" xid="div19" __cid="cJZbyQv" class="cJZbyQv"/> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content cJZbyQv" xid="content1" _xid="C733E5C941F00001B9947E732FCEF5F0" style="bottom: 0px;" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cJZbyQv"> 
+      <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cJZbyQv" xid="contents" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-events="onActiveChange:contentsActiveChange" data-config="{&quot;active&quot;:0,&quot;slidable&quot;:true,&quot;swipe&quot;:true,&quot;wrap&quot;:true}" __cid="cJZbyQv"> 
+        <div class="x-contents-content x-scroll-view active cJZbyQv" xid="picContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cJZbyQv"> 
+          <div class="x-scroll cJZbyQv" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView2" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="cJZbyQv"> 
+            <div class="x-content-center x-pull-down container cJZbyQv" xid="div20" __cid="cJZbyQv"> 
+              <i class="x-pull-down-img glyphicon x-icon-pull-down cJZbyQv" xid="i4" __cid="cJZbyQv"/>  
+              <span class="x-pull-down-label cJZbyQv" xid="span7" __cid="cJZbyQv">下拉刷新...</span> 
+            </div>  
+            <div class="x-scroll-content cJZbyQv" xid="div18" __cid="cJZbyQv"> 
+              <div component="$model/UI2/system/components/justep/list/list" class="x-list x-cards cJZbyQv" xid="picList" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'},event:{click:$model._callModelFn.bind($model, 'imageClick')}" data-config="{&quot;data&quot;:&quot;paiData&quot;,&quot;limit&quot;:8}" __cid="cJZbyQv"> 
+                <ul class="x-list-template list-group hide cJZbyQv" xid="listTemplateUl2" __cid="cJZbyQv" data-bind="foreach:{data:$model.foreach_picList($element),afterRender:$model.foreach_afterRender_picList.bind($model,$element)}"> 
+                  <li xid="li4" class="list-group-item cJZbyQv" __cid="cJZbyQv"> 
+                    <div class="media cJZbyQv" xid="media1" __cid="cJZbyQv"> 
+                      <div class="media-left cJZbyQv" xid="mediaLeft1" __cid="cJZbyQv"> 
+                        <img alt="" xid="image" style="width:120px;height:89px;width:38vw;height: 25.333333333333vw;max-width:120px;max-height:89px;" class="o-img media-object cJZbyQv" dir="rtl" __cid="cJZbyQv" data-bind="attr:{src:val(&quot;fPreviewPath&quot;)}"/> 
+                      </div>  
+                      <div class="media-body cJZbyQv" xid="mediaBody1" __cid="cJZbyQv"> 
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output list-group-item-heading cJZbyQv" xid="output1" style="font-size:14px;font-weight:bold" data-bind="component:{ref:ref(&quot;fFileName&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="cJZbyQv"/>  
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output list-group-item-text cJZbyQv" xid="output2" style="font-weight: bold;" data-bind="component:{ref:ref(&quot;fCreateTime&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="cJZbyQv"/>  
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output list-group-item-text cJZbyQv" xid="output3" data-bind="component:{ref:ref(&quot;fDescription&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="cJZbyQv"/> 
+                      </div> 
+                    </div> 
+                  </li> 
+                </ul> 
+              </div>  
+              <input component="$model/UI2/system/components/justep/input/input" class="form-control cJZbyQv" xid="input1" value="sdsa sas" data-bind="component:{ref:$model.data.ref(&quot;fileName&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="cJZbyQv"/> 
+            </div>  
+            <div class="x-content-center x-pull-up cJZbyQv" xid="div17" __cid="cJZbyQv"> 
+              <span class="x-pull-up-label cJZbyQv" xid="span8" __cid="cJZbyQv">加载更多...</span> 
+            </div> 
+          </div> 
+        </div> 
+      </div>  
+      <div class="text-center panel-body cJZbyQv" __cid="cJZbyQv" data-bind="visible:$model.paiData.count()==0"> 
+        <h5 class="text-muted cJZbyQv" __cid="cJZbyQv">还没有图片，快来上传吧！</h5> 
+      </div> 
+    </div>  
+    <style __cid="cJZbyQv" class="cJZbyQv">.x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p936fdb18f3734211afd2323f2fc06fc1-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

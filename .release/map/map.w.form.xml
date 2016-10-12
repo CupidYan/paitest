@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" class="window cM7BrIj" style="height:100%;" component="$model/UI2/system/components/justep/window/window" xid="window" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cM7BrIj" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.cM7BrIj{background-color: rgb(57, 58, 62)}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model1" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onParamsReceive:modelParamsReceive" __cid="cM7BrIj" class="cM7BrIj"/>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p80caac07b3d1463faf099a80296561d3-iosstatusbar cM7BrIj" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cM7BrIj"> 
+    <div class="x-panel-top cM7BrIj" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cM7BrIj"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cM7BrIj" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;定位&quot;}" __cid="cM7BrIj"> 
+        <div class="x-titlebar-left cM7BrIj" xid="div1" __cid="cM7BrIj"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cM7BrIj" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;}" __cid="cM7BrIj"> 
+            <i xid="i1" class="icon-chevron-left cM7BrIj" __cid="cM7BrIj"/>  
+            <span xid="span1" __cid="cM7BrIj" class="cM7BrIj"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cM7BrIj" xid="div2" __cid="cM7BrIj">定位</div>  
+        <div class="x-titlebar-right  cM7BrIj" xid="div3" __cid="cM7BrIj">
+          <div class="empty cM7BrIj" __cid="cM7BrIj"/>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content cM7BrIj" style="font-size:0;" xid="mapContent" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cM7BrIj"> 
+      <iframe src="" xid="iframe1" frameborder="0" height="100%" width="100%" __cid="cM7BrIj" class="cM7BrIj"/>
+    </div>  
+    <style __cid="cM7BrIj" class="cM7BrIj">.x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p80caac07b3d1463faf099a80296561d3-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

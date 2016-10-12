@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window c6Jfymy" component="$model/UI2/system/components/justep/window/window" design="device:pc" title="用户管理" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="c6Jfymy" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/pagerBar/pagerBar,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/bootstrap/pagination/pagination,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/toolBar/toolBar,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/dataTables/dataTables,$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/bootstrap/inputGroup/inputGroup,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.c6Jfymy{background-color: rgb(57, 58, 62)} .o-img.c6Jfymy{width: 100%; height: 80px} .o-imgList.c6Jfymy{padding: 14px} .o-imgList.c6Jfymy ul.c6Jfymy li.c6Jfymy{padding: 6px} .o-uploadFile.c6Jfymy .x-attachment-content.c6Jfymy{min-height: 48px; min-height: 48px; border-top: 0; background: none; margin-top: 0px} .o-uploadFile.c6Jfymy .x-item-upload.c6Jfymy{width: 48px; height: 48px; background: url(@justepContextPath@/v_33f3218217b843d29f6c7ca6c0838420l_zh_CNs_desktopd_pc/paitest/img/upload.png) no-repeat center center} .o-uploadFile.c6Jfymy .x-attachment.c6Jfymy{min-height: 48px; padding: 0} .o-uploadFile.c6Jfymy .x-attachment.c6Jfymy .x-attachment-cell.c6Jfymy{float: none; margin: 0; height: 48px; display: block} .takeout.c6Jfymy .x-col.c6Jfymy{padding: 0px} .takeout.c6Jfymy .takeout-list-row.c6Jfymy{border-bottom: 1px solid rgb(229, 229, 229)} .takeout.c6Jfymy .x-titlebar.c6Jfymy{background-color: rgb(53, 179, 228)} .blueActive.c6Jfymy{background: skyblue !important}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="c6Jfymy" class="c6Jfymy"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p7a022be5956749669ce7bbfc01a143cd-iosstatusbar c6Jfymy" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="c6Jfymy"> 
+    <div class="x-panel-top c6Jfymy" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="c6Jfymy"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar c6Jfymy" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;用户管理&quot;}" __cid="c6Jfymy"> 
+        <div class="x-titlebar-left c6Jfymy" xid="left1" __cid="c6Jfymy"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon c6Jfymy" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="c6Jfymy"> 
+            <i class="icon-chevron-left c6Jfymy" xid="i1" __cid="c6Jfymy"/>  
+            <span xid="span1" __cid="c6Jfymy" class="c6Jfymy"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title c6Jfymy" xid="title1" __cid="c6Jfymy">用户管理</div>  
+        <div class="x-titlebar-right  c6Jfymy" xid="right1" __cid="c6Jfymy"> 
+          <div class="empty c6Jfymy" __cid="c6Jfymy"/> 
+        </div> 
+      </div>  
+      <div class="x-titlebar-left c6Jfymy" xid="left2" style="background-color:#393a3e;" __cid="c6Jfymy"/> 
+    </div>  
+    <div class="x-panel-content c6Jfymy" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="c6Jfymy"> 
+      <div component="$model/UI2/system/components/justep/toolBar/toolBar" class="x-toolbar form-inline x-toolbar-spliter c6Jfymy" xid="toolBar3" data-bind="component:{name:'$model/UI2/system/components/justep/toolBar/toolBar'}" __cid="c6Jfymy"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c6Jfymy" xid="add" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:addClick" data-config="{&quot;icon&quot;:&quot;icon-android-add&quot;,&quot;label&quot;:&quot;新增&quot;}" __cid="c6Jfymy"> 
+          <i xid="i9" class="icon-android-add c6Jfymy" __cid="c6Jfymy"/>  
+          <span xid="span32" __cid="c6Jfymy" class="c6Jfymy">新增</span> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c6Jfymy" xid="edit" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:editClick" data-config="{&quot;icon&quot;:&quot;icon-edit&quot;,&quot;label&quot;:&quot;编辑&quot;}" __cid="c6Jfymy"> 
+          <i xid="i10" class="icon-edit c6Jfymy" __cid="c6Jfymy"/>  
+          <span xid="span33" __cid="c6Jfymy" class="c6Jfymy">编辑</span> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link c6Jfymy" xid="delete" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:deleteClick" data-config="{&quot;icon&quot;:&quot;icon-android-remove&quot;,&quot;label&quot;:&quot;删除&quot;}" __cid="c6Jfymy"> 
+          <i xid="i12" class="icon-android-remove c6Jfymy" __cid="c6Jfymy"/>  
+          <span xid="span40" __cid="c6Jfymy" class="c6Jfymy">删除</span> 
+        </a>  
+        <div class="input-group pull-right c6Jfymy" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup4" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="c6Jfymy"> 
+          <input type="text" class="form-control c6Jfymy" component="$model/UI2/system/components/justep/input/input" xid="selectCondition" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;placeHolder&quot;:&quot;请输入&quot;}" __cid="c6Jfymy"/>  
+          <div class="input-group-btn c6Jfymy" xid="layoutWizard2" __cid="c6Jfymy"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-only-icon c6Jfymy" xid="select" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:selectClick" data-config="{&quot;icon&quot;:&quot;icon-android-search&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="c6Jfymy"> 
+              <i xid="i6" class="icon-android-search c6Jfymy" __cid="c6Jfymy"/>  
+              <span xid="span25" __cid="c6Jfymy" class="c6Jfymy"/> 
+            </a> 
+          </div> 
+        </div> 
+      </div>  
+      <table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/dataTables/dataTables" flexibleWidth="true" responsive="true" rowActiveClass="blueActive" class="table table-hover table-striped c6Jfymy" xid="userDataTables" data="userData" data-config="{&quot;columns&quot;:[{&quot;sName&quot;:&quot;user_id&quot;,&quot;title&quot;:&quot;员工编号&quot;,&quot;xid&quot;:&quot;column1&quot;},{&quot;sName&quot;:&quot;user_name&quot;,&quot;title&quot;:&quot;员工姓名&quot;,&quot;xid&quot;:&quot;column2&quot;},{&quot;sName&quot;:&quot;user_sex&quot;,&quot;title&quot;:&quot;性别&quot;,&quot;xid&quot;:&quot;column4&quot;},{&quot;sName&quot;:&quot;admin&quot;,&quot;title&quot;:&quot;权限&quot;,&quot;xid&quot;:&quot;column6&quot;}],&quot;data&quot;:&quot;userData&quot;,&quot;flexibleWidth&quot;:true,&quot;responsive&quot;:true,&quot;rowActiveClass&quot;:&quot;blueActive&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/dataTables/dataTables'}" data-events="onRowDblClick:userDataTablesRowDblClick" __cid="c6Jfymy"></table>  
+      <div component="$model/UI2/system/components/justep/pagerBar/pagerBar" class="x-pagerbar container-fluid c6Jfymy" xid="pagerBar3" data-bind="component:{name:'$model/UI2/system/components/justep/pagerBar/pagerBar'}" __cid="c6Jfymy"> 
+        <div class="row c6Jfymy" xid="div19" __cid="c6Jfymy"> 
+          <div class="col-sm-3 c6Jfymy" xid="div20" __cid="c6Jfymy"> 
+            <div class="x-pagerbar-length c6Jfymy" xid="div21" __cid="c6Jfymy"> 
+              <label component="$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect" class="x-pagerlimitselect c6Jfymy" xid="pagerLimitSelect3" data-bind="component:{name:'$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect'}" data-config="{&quot;defaultValue&quot;:10}" __cid="c6Jfymy"> 
+                <span xid="span34" __cid="c6Jfymy" class="c6Jfymy">显示</span>  
+                <select component="$model/UI2/system/components/justep/select/select" class="form-control input-sm c6Jfymy" xid="select5" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'}" __cid="c6Jfymy"> 
+                  <option value="10" xid="default26" __cid="c6Jfymy" class="c6Jfymy">10</option>  
+                  <option value="20" xid="default27" __cid="c6Jfymy" class="c6Jfymy">20</option>  
+                  <option value="50" xid="default28" __cid="c6Jfymy" class="c6Jfymy">50</option>  
+                  <option value="100" xid="default29" __cid="c6Jfymy" class="c6Jfymy">100</option> 
+                </select>  
+                <span xid="span35" __cid="c6Jfymy" class="c6Jfymy">条</span> 
+              </label> 
+            </div> 
+          </div>  
+          <div class="col-sm-3 c6Jfymy" xid="div22" __cid="c6Jfymy"> 
+            <div class="x-pagerbar-info c6Jfymy" xid="div23" __cid="c6Jfymy">当前显示0条，共0条</div> 
+          </div>  
+          <div class="col-sm-6 c6Jfymy" xid="div24" __cid="c6Jfymy"> 
+            <div class="x-pagerbar-pagination c6Jfymy" xid="div25" __cid="c6Jfymy"> 
+              <ul class="pagination c6Jfymy" component="$model/UI2/system/components/bootstrap/pagination/pagination" xid="pagination3" data-bind="component:{name:'$model/UI2/system/components/bootstrap/pagination/pagination'}" __cid="c6Jfymy"> 
+                <li class="prev c6Jfymy" xid="li2" __cid="c6Jfymy"> 
+                  <a href="#" xid="a5" __cid="c6Jfymy" class="c6Jfymy"> 
+                    <span aria-hidden="true" xid="span36" __cid="c6Jfymy" class="c6Jfymy">«</span>  
+                    <span class="sr-only c6Jfymy" xid="span37" __cid="c6Jfymy">Previous</span> 
+                  </a> 
+                </li>  
+                <li class="next c6Jfymy" xid="li10" __cid="c6Jfymy"> 
+                  <a href="#" xid="a6" __cid="c6Jfymy" class="c6Jfymy"> 
+                    <span aria-hidden="true" xid="span38" __cid="c6Jfymy" class="c6Jfymy">»</span>  
+                    <span class="sr-only c6Jfymy" xid="span39" __cid="c6Jfymy">Next</span> 
+                  </a> 
+                </li> 
+              </ul> 
+            </div> 
+          </div> 
+        </div> 
+      </div>  
+      <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="userWindowDialog" style="top:108px;left:44px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-events="onReceived:userWindowDialogReceived" data-config="{&quot;height&quot;:&quot;100%&quot;,&quot;showTitle&quot;:true,&quot;src&quot;:&quot;$model/UI2/paitest/addUser.w&quot;,&quot;status&quot;:&quot;normal&quot;,&quot;title&quot;:&quot;新增会员&quot;,&quot;width&quot;:&quot;100%&quot;}" __cid="c6Jfymy" class="c6Jfymy"> 
+        <result concept="userData" operation="edit" origin="userData" xid="default34" __cid="c6Jfymy" class="c6Jfymy"> 
+          <mapping from="user_id" to="user_id" locator="true" xid="default35" __cid="c6Jfymy" class="c6Jfymy"/>  
+          <mapping from="user_name" to="user_name" xid="default36" __cid="c6Jfymy" class="c6Jfymy"/>  
+          <mapping from="user_sex" to="user_sex" xid="default37" __cid="c6Jfymy" class="c6Jfymy"/>  
+          <mapping from="admin" to="admin" xid="default38" __cid="c6Jfymy" class="c6Jfymy"/> 
+        </result>  
+        <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay c6Jfymy" __cid="c6Jfymy"></div>  
+        <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog c6Jfymy" style="display:none;" showTitle="true" __cid="c6Jfymy">  
+          <div class="x-dialog-title c6Jfymy" __cid="c6Jfymy"> 
+            <button class="close c6Jfymy" __cid="c6Jfymy"> 
+              <span __cid="c6Jfymy" class="c6Jfymy">×</span> 
+            </button>  
+            <div class="x-dialog-title-text c6Jfymy" __cid="c6Jfymy">新增会员</div> 
+          </div>  
+          <div class="x-dialog-body c6Jfymy" __cid="c6Jfymy"/> 
+        </div> 
+      </span> 
+    </div>  
+    <div class="x-panel-bottom c6Jfymy" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="c6Jfymy"/>  
+    <style __cid="c6Jfymy" class="c6Jfymy">.x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p7a022be5956749669ce7bbfc01a143cd-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

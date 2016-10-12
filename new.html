@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>native交互接口测试页面</title>
+<style>
+*{padding:0;margin:0;}
+html,body{font-size: 12; color:#333;}
+body{padding-top:.875rem;}
+
+.lead{line-height: 1.5; text-align: center; color:#878787;}
+.btnBox{width:90%; margin:0 auto; margin-bottom:.875rem;}
+.button{width:100%;  line-height: 1.5; font-size: 18px; text-align: center; border:1px #d7d7d7 solid; background:#f0f0f0; outline: rgba(0,0,0,0);}
+.sel{width:100%; height:2rem; line-height: 1.5; font-size: 18px; text-align: center; border:1px #d7d7d7 solid; background:#f0f0f0; outline: rgba(0,0,0,0);}
+.showWindow{ width:80%; background:#f7f7f7; padding:10px; margin:0 auto;}
+
+.grid-3{ width:32%;}
+.grid-4{ width:23%;}
+.grid-5{ width:48%;}
+.grid-6{ width:60%;}
+.grid-7{ width:73%;}
+</style>
+
+<!--引入native.js 进行调用-->
+<script src="native.js"></script>
+</head>
+<body>
+<p class="lead"><a  href="javascript:window.location.reload();"> 刷新 </a></p>
+<br>
+<p class="lead">注意<br>1、保证高德地图证书可用<br> 2、保证登录的服务器能上传图片</p>
+
+<p class="lead">OnDidFinishLoadCb 失效</p>
+<script>
+function OnDidFinishLoadCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(datas);
+	
+	alert("OnDidFinishLoadCb:"+str_para);
+}
+</script>
+
+<p class="lead" id="J_getInfo"></p>
+
+<div class="btnBox">
+	<button class="button button-xs" onclick="isOnline();">js判断网络是否在线</button>
+</div>
+
+<script>
+
+var timeid = setTimeout(function(){
+	alert(233);
+},3000);
+
+//if(!isOnline()){
+//	//alert("true");
+//	//return true;
+//}else{
+//	//alert("false");
+//	//return false;
+//}
+
+/*
+ * @说明：isOnline 判断设备是否在网
+ * 安卓webview中低版本中失效 永远返回false；需要安卓端给web进行赋值
+ * mWebView.setNetworkAvailable(isNetworkAvailable(context)); 在aboutme 文件夹中
+ * 在qq浏览器，微信等均可正常使用
+ * 
+ * */
+function isOnline(){
+	clearTimeout(timeid);
+	console.log("执行了清除timeid");
+	if(navigator.onLine){
+		//alert("true");
+		return true;
+	}else{
+		//alert("false");
+		return false;
+	}
+}
+</script>
+
+<!--
+**
+* @退出当前注册用户 
+*-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="logout();">退出当前注册用户</button> 
+</div>
+<script>
+function logout(){
+	NativeInteractive.logout();
+}
+</script>
+
+<!--
+**
+* @ 关闭webview
+*-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="closeWebView();">关闭webview</button> 
+</div>
+<script>
+function closeWebView(){
+	NativeInteractive.closeWebView();
+}
+</script>
+
+<!--
+/*@ toast 弹出弹出框
+ * position TOP BOTTOM CENTER
+ */
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="toast();">弹出提示信息</button>
+</div>
+<script>
+function toast(){
+	var message="测试弹出的message，duration1.0，BOTTOM",
+		duration=1.0,
+		position="BOTTOM";
+	NativeInteractive.toast({"message":message,"duration":duration,"position":position});
+}
+function OnToastCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("toast回调函数OnToastCb:"+str_para);
+}
+</script>
+
+<!--
+/*
+ * 弹出提示信息 alerts
+ * 参数名：title 提示标题
+ * 		 message 内容区内容
+ * 		 deaultButton 基础按钮文字 默认取消
+ * 		 otherButton  确认按钮文字 默认确定
+					     如果单按键该参数不填，
+					     如果双按键该参数填文本，
+					     如果三按键或以上，文本之间用,隔开
+ * 		 fn  执行的函数名称与相关参数按照json字符串传入
+ */
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="alerts();">Alert弹出提示信息[安卓失效]</button>
+</div>
+<script>
+
+function alerts(){
+	var parameter = {
+		"title":"确定ALERT操作",
+		"message":"解释说明文字",
+		"defaultButton":"取消",
+		"otherButton":"index1,index2",
+		"fn":"index,123"
+	};
+	NativeInteractive.alerts(parameter);
+}
+function OnAlertCb(datas){
+	//alert("datas"+datas);
+	var status = datas.result.status,
+		request_params = datas.request.params,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+
+	alert("OnAlertCb回调函数:"+str_para);
+		
+}
+function index1(data){
+	alert("此处执行index1：所带参数"+data);
+}
+function index2(data){
+	alert("此处执行index2：所带参数"+data);
+}
+</script>
+
+ <!--
+ * @发送mqtt消息
+ * tid          用户               uid
+ * type         格式               text
+ * content      发送的内容    string类型
+ * receiverType 接收者类型     "IM"表示点对点消息（默认）  
+ * 						 "Group"表示群组消息 （可选）
+ * 
+ * 备注：安卓端content部分被隐藏了如需要联系安卓端开启
+ *-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='sendMqttMsg();'>发送mqtt 5@3消息</button> 
+</div>
+<script>
+function sendMqttMsg(){
+	NativeInteractive.sendMqttMsg({"tid":"5@3","type":"text","content":"hellow world","receiverType":"IM"});
+}
+</script>
+
+<!--
+* @选择联系人
+* maxCount  选择联系人数目上限
+* tag       返回联系人属性由需要返回的字段名称组成，中间用,隔开 （可选）
+* callback  回调名称 (可选) 默认值：OnSelectContactsCb
+* 备注：
+* native会根据callback名称把返回值带回来
+* 
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="selectContacts();">选择联系人</button>	
+</div>
+<script>
+function selectContacts(){	
+	NativeInteractive.selectContacts({"maxCount":2,"tag":"uid,name,avatar","callback":"OnSelectContactsCb"});
+}
+function OnSelectContactsCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	alert("selectContacts回调函数OnSelectContactsCb:"+str_para);
+}
+</script>
+<!--**
+* @ 查找联系人
+* maxCount     用于显示联系人的上限
+* searchString 匹配字符串
+* matchTyp     匹配字符串 (可选) 默认为All 中间用,隔开
+			"All"表示全部匹配
+			"Name"表示名字
+			"Pin"表示名字全拼
+			"InitialPin"表示名字首字母简拼
+			"InitialNum"表示名字首字母对应数字
+			"MobileNum"表示手机号
+			"Cornet"表示群内短号
+* tag          返回联系人属性 (可选)  例如："uid,name,avatar"
+* callback     回调名称 (可选) 默认值：OnSearchContactsCb
+* 
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="searchContacts();">查找联系人包含139的</button>	
+</div>
+<script>
+function searchContacts(){	
+	NativeInteractive.searchContacts({"maxCount":99,"searchString":"139","matchTyp":"All","tag":"","callback":"OnSearchContactsCb"});
+}
+function OnSearchContactsCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("searchContacts回调函数OnSearchContactsCb:"+str_para);
+}
+</script>
+<!--**
+* @扫描二维码
+* 
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="scanQRCode();">扫描二维码</button>	
+</div>
+<script>
+function scanQRCode(){
+	NativeInteractive.scanQRCode();
+}
+</script>
+</script>
+<!--**
+* @获取位置信息
+* callback值：OnGetLocationInfoCb
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="getLocationInfo();">获取位置信息</button>	
+</div>
+<script>
+
+function getLocationInfo(){
+	NativeInteractive.getLocationInfo();
+}
+function OnGetLocationInfoCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("getLocationInfo回调函数OnGetLocationInfoCb:"+str_para);
+}
+
+</script>
+<!--**
+* @获取网络状态
+* callback值：OnGetNetStatusCb
+* 返回值：请参考接口交互文档中的说明
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="getNetStatus();">获取网络状态</button>	
+</div>
+<script>
+function getNetStatus(){
+	NativeInteractive.getNetStatus();
+}
+function OnGetNetStatusCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("getNetStatus回调函数OnGetNetStatusCb:"+str_para);
+}
+</script>
+<!--**
+* @获取设备信息
+* callback值：OnGetDeviceInfoCb
+* 返回值：请参考接口交互文档中的说明
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="getDeviceInfo();">获取设备信息</button>	
+</div>
+<script>
+function getDeviceInfo(){
+	NativeInteractive.getDeviceInfo();
+}
+function OnGetDeviceInfoCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("getDeviceInfo回调函数OnGetDeviceInfoCb:"+str_para);
+}
+</script>
+<!--**
+* @获取本地语言信息
+* callback值：OnGetLocalLanguageCb
+* 返回值：请参考接口交互文档中的说明
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="getLocalLanguage();">获取本地语言信息</button>	
+</div>
+<script>
+function getLocalLanguage(){
+	NativeInteractive.getLocalLanguage();
+}
+function OnGetLocalLanguageCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("getLocalLanguage回调函数OnGetLocalLanguageCb:"+str_para);
+}
+</script>
+
+<!--
+/**
+ * 请求本地系统时间
+ */
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="requestLocalDate();">请求本地系统时间</button>
+</div>
+<script>
+function requestLocalDate(){
+	NativeInteractive.requestLocalDate();
+}
+function OnRequestLocalDateCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("requestLocalDate回调函数OnRequestLocalDateCb:"+str_para+"单位微秒");
+} 
+
+</script>
+
+<!--
+/*
+ * 播放系统音效
+ * soundName 音频名称
+ * callback 默认为OnPlaySystemSoundCb
+ * */
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="playSystemSound();">播放系统音效</button>
+</div>
+<script>
+function playSystemSound(){
+	var soundName = "lock.caf"; 
+	NativeInteractive.playSystemSound({"soundName":soundName});
+}
+function OnPlaySystemSoundCb(datas){
+	var status = datas.result.status;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(status);
+	
+	alert("playSystemSound回调函数OnPlaySystemSoundCb声音回调有啥用呢？值返回状态status:"+status);
+}
+</script>
+<!--
+/*
+ * 获取手机通讯录联系人
+ * 
+ * */
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="requestLocalContacts();">获取手机通讯录联系人</button>
+</div>
+<script>
+
+function requestLocalContacts(){	
+	NativeInteractive.requestLocalContacts();
+}
+function OnRequestLocalContactsCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("requestLocalContacts回调函数OnRequestLocalContactsCb:"+str_para);
+} 
+
+</script>
+
+<!--
+/*
+ * 查找本地联系人
+ * maxCount      用于显示联系人的上限
+ * searchString  匹配字符串
+ * 匹配类型包含姓名，电话，姓名全拼，姓名首字母简拼
+ * */
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='searchLocalContacts();'>查找本地联系人</button>
+</div>
+<script>
+
+function searchLocalContacts(){
+	var maxCount = "99",
+		searchString = "向杰";
+	NativeInteractive.searchLocalContacts({"maxCount":maxCount,"searchString":searchString});
+}
+function OnSearchLocalContactsCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("searchLocalContacts回调函数OnSearchLocalContactsCb:"+str_para);
+} 
+
+</script>
+
+<!--
+/*
+ * 查找本地联系人
+ * maxCount      用于显示联系人的上限
+ * searchString  匹配字符串
+ * birthday 秒级别
+ * */
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="addLocalContact();">添加本地联系人[安卓不好用]</button>
+</div>
+<script>
+
+function addLocalContact(){
+	var contactInfo = {
+        "firstName": "晓峰", 
+        "lastName": "A", 
+        "organization": "计算所", 
+        "birthday": 1452476706, 
+        "phones": {
+            "phoneCount": 2, 
+            "phoneList": [
+                {
+                    "label": "工作", 
+                    "value": "13920392312"
+                }, 
+                {
+                    "label": "杭州", 
+                    "value": "18329238289"
+                }
+            ]
+        }, 
+        "emails": {
+            "emailCount": 2, 
+            "emailList": [
+                {
+                    "label": "工作", 
+                    "value": "13920392312@qq.com"
+                }, 
+                {
+                    "label": "杭州", 
+                    "value": "18329238289@qq.com"
+                }
+            ]
+        }, 
+        "addresses": {
+            "addressCount": 2, 
+            "addressList": [
+                {
+                    "label": "工作", 
+                    "value": "沈阳市"
+                }, 
+                {
+                    "label": "杭州", 
+                    "value": "杭州市西湖区"
+                }
+            ]
+        }, 
+        "notes": "啊啊啊"
+    };
+	NativeInteractive.addLocalContact(contactInfo);
+}
+function OnAddLocalContactCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(datas);
+	
+	alert("searchLocalContacts回调函数OnSearchLocalContactsCb:"+str_para);
+} 
+
+</script>
+
+<!--**
+* @下载接口
+* @ param 
+* fileName	文件名	是
+fileID	文件唯一标识	是
+taskID	任务唯一标识 （服务器端构造，用于将文件和任务进行关联）	
+size	文件大小	
+path	文件所在的服务器端的路径	
+isAutoDownload	自动下载	    0为不自动下载    1为自动下载
+isAutoPreView	下载后自动预览	0为不自动预览     1为自动预览
+uploader	上传者名称          (可选)
+uploadTime	上传时间              (可选)
+不同于时间戳，为格式化显示时间	(可选)
+*
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="download();">文件下载</button>	
+</div>
+<script>
+function download(){
+	var parameter = {"fileName":"HelloWorld.txt",
+		"fileID":"b21a26c9325e0daa04ddd90f32b0f88b",
+		"taskID":"task150803casq5509",
+		"size":"125",
+		"path": "https://183.234.48.161:443/media_file/2015/b21aubSg&e=125",
+		"isAutoDownload":0,
+		"isAutoPreView":0,
+		"uploader":"陈晨",
+		"uploadTime":"2015-10-21 11:15:59",
+		"callback":"OnDownloadCb"
+	};
+	NativeInteractive.download(parameter);
+}
+function OnDownloadCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("download回调函数OnDownloadCb:"+str_para);
+}
+</script>
+
+<div class="btnBox">
+	<button class="button button-xs" onclick="upload();">上传文件</button>	
+</div>
+<script>
+function upload(){
+	/*
+	 * suffix 上传URL参数后缀若为空则默认&fileType=3 可选 
+	 */
+	var setting ={ uploadUrl : "https://183.234.48.161:443/media_file/",
+		webAppTransferID : "announcement0000001",
+		taskID : "task150803casq5511",
+		suffix : "&fileType=3"};
+	NativeInteractive.upload(setting);
+}
+function OnUploadCb(datas){
+	/*
+	 * transferStatus:
+	 * “Failure”表示上传或下载失败 ，“Success”表示上传或下载成功，“Transmission”表示上传或下载中，“Cancel”表示传输取消
+	 */
+	var status = datas.result.status,
+		params = datas.result.params;
+	
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("upload回调函数OnUploadCb:"+str_para);
+}
+</script>
+<!--
+<div class="btnBox">
+<button class="button grid-4" onclick="">录音</button>
+<button class="button grid-4" onclick="">暂停</button>
+<button class="button grid-4" onclick="">停止</button>
+<button class="button grid-4" onclick="">取消</button>	
+</div>
+
+<div class="btnBox">
+<button class="button grid-4" onclick="">播放</button>
+<button class="button grid-4" onclick="">暂停</button>
+<button class="button grid-4" onclick="">恢复</button>
+<button class="button grid-4" onclick="">停止</button>
+</div>-->
+
+<!--*
+* @ 分享
+* @ 参数说明
+** platform
+ * "QQ"表示QQ，
+	"WeChat"表示微信，
+	"Sina"表示新浪微博，
+	"YiXin"表示易信
+ * shareType
+ *  "Web"表示链接分享 ，
+	"Text"表示文本分享，
+	"Music"表示音乐（语音）分享 ，
+	"Video"表示视频分享，
+	"Image"表示图片分享 
+ * shareData 如果web分享则该处填webURL
+ * shareTitle	分享标题
+	shareThumbImage	分享缩略图
+	shareDescription	分享描述
+	shareTag	分享标签
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="share();">分享[不可用]</button>	
+</div>
+
+<!--*
+* @ chooseSheetPhoto 选择图片，裁剪并上传
+* @ param 参数
+* webAppTransferID 唯一标识
+* chooseType 默认"ChooseFromActionSheet"表示上拉菜单/弹出框选择
+* editType 默认0 为不裁剪  1 为裁剪
+* photoRatio 裁剪比例   1为正方形
+* 其他参数参见交互文档
+* 
+* OnChoosePhotoCb 返回参数参加文档
+* 
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="chooseSheetPhoto();">选择照片<span id="tip_choosephoto" style="display: none;">(上传中需等待)</span></button>	
+</div>
+<script>
+function chooseSheetPhoto(){
+	var transferid = parseInt(new Date().getTime()/1000);
+	NativeInteractive.chooseSheetPhoto({"webAppTransferID":transferid,"editType":1});
+}
+function OnChoosePhotoCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+		if(status==0){
+			var str_para = JSON.stringify(params);		
+			alert("upload回调函数OnUploadCb:"+str_para+"status:"+status);
+			
+			document.getElementById("tip_choosephoto").style.display = "inline-block";
+			var setting = {
+				"uploadUrl":"https://183.234.48.161:443/media_file/",
+				"fileID":params.fileID,
+				"fileName":params.fileName,
+				"taskID":params.webAppTransferID,
+				"nativePath":params.nativePath
+			}	
+			NativeInteractive.uploadGivenFile(setting);	
+		}
+		
+	
+}
+function OnUploadGivenFileCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	if(params){
+		var transferStatus = params.transferStatus;
+		if(transferStatus=="Success"){
+			document.getElementById("tip_choosephoto").style.display = "none";
+			var str_para = JSON.stringify(params);
+			alert("OnUploadGivenFileCb 图片已上传:"+str_para);
+		}
+	}
+}
+
+</script>
+
+<!--*
+* 
+webAppTransferID  用于标识音频文件
+formatType	               音频格式		只支持amr文件                  默认 "AMR"
+sampleRate	               音频采样率		8000/16000               注：默认为8000
+channelCount	     通道数	        1                                      注：默认单声道 1
+bitsPerSample	    采样点位数		8/16/24/32               注：默认为8
+limitSize	              音频文件大小限制	单位为字节                            默认1048576
+limitLength       音频文件时长限制     单位为秒                                默认600秒     
+ * 
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick="recordAudio();">录制-音频</button>
+</div>
+<script>
+
+function recordAudio(){
+	var transferid = parseInt(new Date().getTime()/1000);
+	var setting = {"webAppTransferID":transferid,
+		"formatType":"AMR",
+		"sampleRate":8000,
+		"channelCount":1,
+		"bitsPerSample":8,
+		"limitSize":1048576,
+		"limitLength":600
+		};
+	NativeInteractive.recordAudio(setting);
+}
+function OnRecordAudioCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("recordAudio回调函数OnRecordAudioCb:"+str_para);
+}
+</script>
+
+<div class="btnBox">
+	<button class="button button-xs" onclick="shootVideo();">录制-视频</button>
+</div>
+<script>
+function shootVideo(){
+	var transferid = parseInt(new Date().getTime()/1000);
+	var setting = {"webAppTransferID":transferid,
+		"videoQuality":"640*480",
+		"limitSize":104857600,
+		"limitLength":600
+	};
+	NativeInteractive.shootVideo(setting);
+}
+function OnShootVideoCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("shootVideo回调函数OnShootVideoCb:"+str_para);
+}
+</script>
+
+<!--*
+ *  @ 本地离线存储
+ * param 传入 key  keys
+ * 			data  data 为避免 复杂参数解析问题，可以提前base64转码
+ * 			appID 默认为1
+ * 			type 默认为 table
+ * 			callback 默认 OnAppCacheStoreCb
+ * 在native里表结构如下
+ * ------------------------
+ *     key    |    value
+ * -----------------------
+ *     keys   |    datas
+*-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='appCacheStore();'>存储离线数据</button>
+</div>
+<script>
+function appCacheStore(){
+	var setting = {
+		"keys":"dbkeys",
+		"datas":"hi如果字符串复杂有转义符需要使用base64转码"
+	};
+	NativeInteractive.appCacheStore(setting);
+}
+function OnAppCacheStoreCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("appCacheStore回调函数OnAppCacheStoreCb:"+str_para);
+}
+
+</script>
+
+<!--*
+ *  @ 读取本地存储的数据
+ * param 传入 key  keys
+ * 			appID 默认为1
+ * 			type 默认为 table
+ * 			callback 默认OnAppCacheFetchCb
+*-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='appCacheFetch();'>读取本地存储的数据</button>
+</div>
+<script>
+function appCacheFetch(){
+	
+	NativeInteractive.appCacheFetch({"keys":"dbkeys"});
+}
+function OnAppCacheFetchCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("appCacheFetch回调函数OnAppCacheFetchCb:"+str_para);
+}
+
+</script>
+
+<!--*
+ *  @ 本地离线存储
+ * param 传入 key  keys
+ * 			appID 默认为1
+ * 			type 默认为 table
+ * 			callback 默认OnAppCacheDeleteCb
+*-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='appCacheDelete();'>删除刚才的数据</button>
+</div>
+<script>
+function appCacheDelete(){
+	NativeInteractive.appCacheDelete({"keys":"dbkeys"});
+}
+function OnAppCacheDeleteCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("appCacheDelete回调函数OnAppCacheDeleteCb:"+str_para);
+}
+
+</script>
+
+<!--*
+ * @ 删除本地数据库
+* param 传入 可不传
+ * 			appID 默认为1
+ * 			type 默认为 table
+ * 			callback 默认OnAppCacheDeleteCb
+*-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='appCacheClear();'>删除本地数据库</button>
+</div>
+<script>
+function appCacheClear(){
+	NativeInteractive.appCacheClear();
+}
+function OnAppCacheClearCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("appCacheClear回调函数OnAppCacheClearCb:"+str_para);
+}
+
+</script>
+
+<!--
+ * @发短信
+ * param ： number 发送目标手机号
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='SMS("10086");'>发短信10086</button>
+</div>
+<script>
+function SMS(number){
+	NativeInteractive.SMS(number);
+}
+</script>
+
+<!--
+ * @请求用户账号信息
+ * param ： typeList 用户账号信息种类，其中包括
+					uid,password,token,url,apiKey
+					之间用,分隔
+-->
+<div class="btnBox">
+	<button class="button button-xs" onclick='requestAccountInfo();'>请求用户账号信息[不可用]</button>
+</div>
+<script>
+function requestAccountInfo(){
+	var setting = {
+		"typeList":"uid,password,token,url"
+	};
+	NativeInteractive.requestAccountInfo(setting);
+}
+function OnRequestAccountInfoCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	//这里做一个演示，把数据转成字符串在页面弹出
+	var str_para = JSON.stringify(params);
+	
+	alert("OnRequestAccountInfoCb:"+str_para);
+}
+</script>
+
+<!--
+* @开启运动传感器监听
+* param monitorType    监听类型
+* 		frequent       监听频率，1s/回调次数
+* 		motionType     监听运动类型
+* 		referenceFrame Attitude参考坐标系
+* 		callback 默认 OnStartMotionMonitorCb
+* 返回值参考文档
+-->
+<div class="btnBox">
+	<button class="button grid-7" onclick='startMotionMonitor();'>开启运动传感器监听</button>
+	<button class="button grid-4" onclick='stopMotionMonitor();'>关闭</button>
+</div>
+<div class="showWindow">
+	<h3>运动传感器监听</h3>
+	<span>当前事件监听：</span>
+	<span id="motionMonitor"></span> <br>
+	<span>运动传感器的返回json：</span><br>
+	<span id="motionMonitorState"></span>	
+</div>
+
+<script>
+
+function startMotionMonitor(){
+	var setting = {
+		"monitorType" : 1,
+		"frequent" : 0.3,
+		"motionType" : "acceleration,userAcceleration, gravity,rotationRate,attitude,magneticField",
+		"referenceFrame" : 3
+	};
+	NativeInteractive.startMotionMonitor(setting);
+}
+
+function OnStartMotionMonitorCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	if(status==0){
+		//这里做一个演示，把数据转成字符串在页面弹出
+		var html="";
+		var str_para = JSON.stringify(params);
+		var strs = str_para.split(",");
+		for (i=0;i<strs.length ;i++ ){ 
+		    html = html + (strs[i]+"<br/>"); //分割后的字符输出 
+		}	
+		var motionMonitor = document.getElementById("motionMonitor"),
+			motionMonitorState = document.getElementById("motionMonitorState");
+		motionMonitor.innerHTML = "已开启运动传感器监听";
+		motionMonitorState.innerHTML = html;
+	}else{
+		motionMonitor.innerHTML="开启运动传感器监听 失败";
+	}
+}
+
+function stopMotionMonitor(){
+	NativeInteractive.stopMotionMonitor();
+}
+function OnStopMotionMonitorCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	var motionMonitor = document.getElementById("motionMonitor"),
+		motionMonitorState = document.getElementById("motionMonitorState");
+	if(status==0){
+		motionMonitor.innerHTML="关闭运动传感器监听 成功";
+	}else{
+		motionMonitor.innerHTML="关闭运动传感器监听 失败";
+	}
+}
+
+</script>
+
+<!--
+* @开启距离传感器监听 
+* param 参数 monitorType 监听类型
+* 返回值参考文档   proximityState 1 有物体接近  0 没有
+-->
+<div class="btnBox">
+	<button class="button grid-7" onclick='startProximityMonitor();'>开启距离传感器监听</button>
+	<button class="button grid-4" onclick='stopProximityMonitor();'>关闭</button>
+</div>
+<div class="showWindow">
+	<h3>距离传感器监听</h3>
+	<span>当前事件监听：</span>
+	<span id="proximityMonitor"></span> <br>
+	<span>proximityState：</span>
+	<span id="proximityState"></span>
+</div>
+<script>
+
+function startProximityMonitor(){
+	var proximityMonitor = document.getElementById("proximityMonitor");	
+	proximityMonitor.innerHTML = "已开启距离传感器监听";
+	NativeInteractive.startProximityMonitor({"monitorType":"1"});
+}
+function OnStartProximityMonitorCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	var proximityMonitor = document.getElementById("proximityMonitor"),
+	    proximityState = document.getElementById("proximityState");
+	
+	proximityMonitor.innerHTML = "已开启距离传感器监听";
+	proximityState.innerHTML = params.proximityState;
+}
+function stopProximityMonitor(){
+	NativeInteractive.stopProximityMonitor();	
+}
+function OnStopProximitySensorCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+	var proximityMonitor = document.getElementById("proximityMonitor"),
+		proximityState = document.getElementById("proximityState");
+	if(status==0){
+		proximityMonitor.innerHTML="停止距离传感器监听 成功";
+	}else{
+		proximityMonitor.innerHTML="停止距离传感器监听 失败";
+	}
+	proximityState.innerHTML = "";
+}
+</script>
+
+<div class="btnBox">
+	<button class="button grid-7" onclick='startSystemEventMonitor();'>开启系统事件监听</button>
+	<button class="button grid-4" onclick='stopSystemEventMonitor();'>关闭</button>
+</div>
+<div class="showWindow">
+	<h3>系统监听事件[安卓不能用]</h3>
+	<span>当前事件监听：</span>
+	<span id="systemEventMonitor"></span> <br>
+	<span>结果</span><br>
+	<div id="systemEventResult">
+	</div>
+</div>
+<script>
+var systemCallStateDialing="系统电话拨号",
+	systemCallStateIncoming="系统电话来电",
+	systemCallStateConnected="系统电话通话",
+	systemCallStateDisconnected="系统电话结束",
+	screenLockStateLocked="屏幕锁屏",
+	screenLockStateUnlocked="屏幕解锁",
+	appBackgroundStateBackground="应用后台",
+	appBackgroundStateForeground="应用前台";
+
+function startSystemEventMonitor(){
+	var systemEventType = "systemCall,screenLock,appBackground";
+	NativeInteractive.startSystemEventMonitor({"systemEventType":systemEventType});
+	document.getElementById("systemEventMonitor").innerHTML = "开启系统事件监听 成功";
+}
+function OnStartSystemEventMonitorCb(datas){
+	var obj_systemEventType= document.getElementById("systemEventType"),
+		obj_state = document.getElementById("state");
+	var status = datas.result.status,
+		params = datas.result.params;
+	var systemEventType = params.systemEventType,
+		state = params.state;
+
+	var html = "<span>systemEventType:</span><span>"+systemEventType+"</span><br><span>state:</span><span>"+state+"</span><br>";
+	var w_html = document.getElementById("systemEventResult").innerHTML;
+	document.getElementById("systemEventResult").innerHTML=w_html+html;
+}
+
+function stopSystemEventMonitor(){
+	NativeInteractive.stopSystemEventMonitor();
+}
+function OnStopSystemEventMonitorCb(datas){
+	var status = datas.result.status;
+	var systemEventMonitor = document.getElementById("systemEventMonitor"),
+	  	obj_systemEventType= document.getElementById("systemEventType"),
+		obj_state = document.getElementById("state");
+	
+	if(status==0){
+		systemEventMonitor.innerHTML="停止系统事件监听 成功";
+	}else{
+		systemEventMonitor.innerHTML="停止系统事件监听 失败";
+	}
+}
+</script>
+
+<!--
+@ 修改app内部基本资料  头像 签名 手机号 邮箱 地址 邮编
+  方法名 ：personalInfoChange
+-->
+<div class="btnBox">
+	<button class="button">修改app内部基本资料[暂不可用]</button>
+	
+</div>
+
+
+</body>
+</html>

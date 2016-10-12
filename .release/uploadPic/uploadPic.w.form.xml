@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cau2yea" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cau2yea" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/attachment/attachmentSimple,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,$model/UI2/system/components/justep/panel/panel,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">p.cau2yea{padding: 10px 15px; margin-bottom: 0px} .x-attachment-content.cau2yea{border: 0}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cau2yea" class="cau2yea"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar cau2yea" xid="panel1" style="background-color:#F2F2F2;" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cau2yea"> 
+    <div class="x-panel-top cau2yea" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cau2yea">
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cau2yea" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cau2yea"> 
+        <div class="x-titlebar-left cau2yea" xid="left1" __cid="cau2yea">
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cau2yea" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;window.close&quot;}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;返回&quot;}" __cid="cau2yea"> 
+            <i xid="i1" class="icon-chevron-left cau2yea" __cid="cau2yea"/>  
+            <span xid="span2" __cid="cau2yea" class="cau2yea">返回</span>
+          </a>
+        </div>  
+        <div class="x-titlebar-title cau2yea" xid="title1" __cid="cau2yea">
+          <span xid="span1" __cid="cau2yea" class="cau2yea">图片上传</span>
+        </div>  
+        <div class="x-titlebar-right  cau2yea" xid="right1" __cid="cau2yea">
+          <div class="empty cau2yea" __cid="cau2yea"/>
+        </div> 
+      </div>
+    </div>  
+    <div class="x-panel-content cau2yea" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cau2yea">
+      <div xid="div1" __cid="cau2yea" class="cau2yea">
+        <p xid="p1" style="font-size:medium;" __cid="cau2yea" class="cau2yea">主题</p>
+      </div>  
+      <div xid="div2" __cid="cau2yea" class="cau2yea"> 
+        <p xid="p2" style="font-size:medium;" __cid="cau2yea" class="cau2yea">图片</p>
+      </div>  
+      <div component="$model/UI2/system/components/justep/attachment/attachmentSimple" xid="attachmentSimple" data-bind="component:{ref:$model.paiData.ref(&quot;fFileName&quot;),name:'$model/UI2/system/components/justep/attachment/attachmentSimple'}" data-config="{&quot;actionUrl&quot;:&quot;/baas/justep/attachment/simpleFileStore&quot;}" __cid="cau2yea" class="cau2yea"> 
+        <div class="x-attachment cau2yea" xid="div3" __cid="cau2yea"> 
+          <div class="x-attachment-content x-card-border cau2yea" xid="div4" __cid="cau2yea"> 
+            <div class="x-doc-process cau2yea" xid="div5" __cid="cau2yea"> 
+              <div class="progress-bar x-doc-process-bar cau2yea" role="progressbar" style="width:0%;" xid="progressBar1" __cid="cau2yea"/>
+            </div>  
+            <div data-bind="foreach:$attachmentItems" xid="div6" __cid="cau2yea" class="cau2yea"> 
+              <div class="x-attachment-cell cau2yea" xid="div7" __cid="cau2yea"> 
+                <div class="x-attachment-item x-item-other cau2yea" data-bind="click:$model.previewOrRemoveItem.bind($model),style:{backgroundImage:($model.previewPicture.bind($model,$object))()}" xid="div8" __cid="cau2yea"> 
+                  <a data-bind="visible:$model.$state.get() == 'remove'" class="x-remove-barget cau2yea" xid="a1" __cid="cau2yea"/>
+                </div> 
+              </div> 
+            </div>  
+            <div class="x-attachment-cell cau2yea" data-bind="visible:$state.get() == 'upload'" xid="div9" __cid="cau2yea"> 
+              <div class="x-attachment-item x-item-upload cau2yea" data-bind="visible:$state.get() == 'upload'" xid="div10" __cid="cau2yea"/>
+            </div>  
+            <div class="x-attachment-cell cau2yea" data-bind="visible:$state.get() == 'upload' &amp;&amp; $attachmentItems.get().length &gt; 0" xid="div11" __cid="cau2yea"> 
+              <div class="x-attachment-item x-item-remove cau2yea" data-bind="click:changeState.bind($object,'remove')" xid="div12" __cid="cau2yea"/>
+            </div>  
+            <div style="clear:both;" xid="div13" __cid="cau2yea" class="cau2yea"/>
+          </div> 
+        </div> 
+      </div>  
+      <div xid="div14" __cid="cau2yea" class="cau2yea"> 
+        <p xid="p3" style="font-size:medium;" __cid="cau2yea" class="cau2yea">描述</p>
+      </div>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cau2yea" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cau2yea"> 
+        <div class="x-col cau2yea" xid="col1" __cid="cau2yea"/>  
+        <div class="x-col x-col-50 cau2yea" xid="col2" __cid="cau2yea">
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-block cau2yea" xid="submitBtn" style="width:auto;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:submitBtnClick" data-config="{&quot;label&quot;:&quot;提交&quot;}" __cid="cau2yea"> 
+            <i xid="i2" __cid="cau2yea" class="cau2yea"/>  
+            <span xid="span5" __cid="cau2yea" class="cau2yea">提交</span>
+          </a>
+        </div>  
+        <div class="x-col x-col-center cau2yea" xid="col3" __cid="cau2yea"/>
+      </div>
+    </div>  
+    <style __cid="cau2yea" class="cau2yea">.x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4a5acbfe82414ba3b7c2dfe04c66b900-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

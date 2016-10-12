@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cB7ry2y" title="会议记录" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cB7ry2y" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/output/output,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.cB7ry2y{background-color: rgb(57, 58, 62)} .o-img.cB7ry2y{width: 100%; height: 80px} .o-tools.cB7ry2y .btn.cB7ry2y i.cB7ry2y{font-size: 30px} .o-imgList.cB7ry2y{padding: 14px} .o-imgList.cB7ry2y ul.cB7ry2y li.cB7ry2y{padding: 6px} .o-uploadFile.cB7ry2y .x-attachment-content.cB7ry2y{min-height: 48px; min-height: 48px; border-top: 0; background: none; margin-top: 0px} .o-uploadFile.cB7ry2y .x-item-upload.cB7ry2y{width: 48px; height: 48px; background: url($model/UI2/paitest/img/upload.png) no-repeat center center} .o-uploadFile.cB7ry2y .x-attachment.cB7ry2y{min-height: 48px; padding: 0} .o-uploadFile.cB7ry2y .x-attachment.cB7ry2y .x-attachment-cell.cB7ry2y{float: none; margin: 0; height: 48px; display: block} .takeout.cB7ry2y .x-col.cB7ry2y{padding: 0px} .takeout.cB7ry2y .takeout-list-row.cB7ry2y{border-bottom: 1px solid rgb(229, 229, 229)} .takeout.cB7ry2y .x-titlebar.cB7ry2y{background-color: rgb(53, 179, 228)} .uploadbtn.cB7ry2y i.cB7ry2y{font-size: 55px; color: rgb(57, 58, 62)} .side-bar.cB7ry2y{width: 66px; position: fixed; bottom: 20px; right: 25px; font-size: 0; line-height: 0; z-index: 100} .side-bar.cB7ry2y a.cB7ry2y{width: 60px; height: 75px; display: inline-block; margin-bottom: 2px}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onActive:modelActive;onLoad:modelLoad" __cid="cB7ry2y" class="cB7ry2y"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar cB7ry2y" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cB7ry2y"> 
+    <div class="x-panel-content cB7ry2y" xid="content1" _xid="C733E5C941F00001B9947E732FCEF5F0" style="bottom: 0px;" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cB7ry2y"> 
+      <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cB7ry2y" xid="contents" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-events="onActiveChange:contentsActiveChange" data-config="{&quot;active&quot;:0,&quot;slidable&quot;:true,&quot;swipe&quot;:true,&quot;wrap&quot;:true}" __cid="cB7ry2y"> 
+        <div class="x-contents-content x-scroll-view active cB7ry2y" xid="picContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cB7ry2y"> 
+          <div class="x-scroll cB7ry2y" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView2" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" data-config="{&quot;pullUpLabel&quot;:&quot;上拉加载...&quot;}" __cid="cB7ry2y"> 
+            <div class="x-content-center x-pull-down container cB7ry2y" xid="div20" __cid="cB7ry2y"> 
+              <i class="x-pull-down-img glyphicon x-icon-pull-down cB7ry2y" xid="i4" __cid="cB7ry2y"/>  
+              <span class="x-pull-down-label cB7ry2y" xid="span7" __cid="cB7ry2y">下拉刷新...</span>
+            </div>  
+            <div class="x-scroll-content cB7ry2y" xid="div18" __cid="cB7ry2y"> 
+              <div component="$model/UI2/system/components/justep/list/list" class="x-list x-cards cB7ry2y" xid="picList" bind-click="imageClick" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;paiData&quot;,&quot;limit&quot;:8}" __cid="cB7ry2y"> 
+                <ul class="x-list-template list-group hide cB7ry2y" xid="listTemplateUl2" bind-foreach="{data:$model.foreach_picList($element),afterRender:$model.foreach_afterRender_picList.bind($model,$element)}" __cid="cB7ry2y"> 
+                  <li xid="li4" class="list-group-item cB7ry2y" __cid="cB7ry2y"> 
+                    <div class="media cB7ry2y" xid="media1" __cid="cB7ry2y"> 
+                      <div class="media-left cB7ry2y" xid="mediaLeft1" __cid="cB7ry2y"> 
+                        <img alt="" xid="image" style="width:120px;height:89px;width:38vw;height: 25.333333333333vw;max-width:120px;max-height:89px;" class="o-img media-object cB7ry2y" bind-attr-src=" val(&quot;fThumb&quot;)" dir="rtl" __cid="cB7ry2y"/>
+                      </div>  
+                      <div class="media-body cB7ry2y" xid="mediaBody1" __cid="cB7ry2y"> 
+                        <div component="$model/UI2/system/components/justep/output/output" xid="output1" style="font-size:20px;font-weight:bold;font-family:方正舒体;font-style:normal;text-decoration:none;color:#000000;" class="x-output list-group-item-heading cB7ry2y" data-bind="component:{ref:ref(&quot;fUserName&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="cB7ry2y"/>  
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output list-group-item-text cB7ry2y" xid="output3" style="font-family:华文隶书;font-size:medium;width:835px;height:28px;" data-bind="component:{ref:ref(&quot;fDescription&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="cB7ry2y"/>
+                        <div component="$model/UI2/system/components/justep/output/output" class="x-output list-group-item-text cB7ry2y" xid="output2" style="font-weight:bold;font-family:华文细黑;color:#999;" data-bind="component:{ref:ref(&quot;fCreateTime&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="cB7ry2y"/>
+                      </div> 
+                    </div> 
+                  </li> 
+                </ul> 
+              </div>  
+              <input component="$model/UI2/system/components/justep/input/input" class="form-control cB7ry2y" xid="input1" style="height:0;visibility:hidden;" data-bind="component:{ref:$model.data.ref(&quot;fileName&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="cB7ry2y"/>
+            </div>  
+            <div class="x-content-center x-pull-up cB7ry2y" xid="div17" __cid="cB7ry2y"> 
+              <span class="x-pull-up-label cB7ry2y" xid="span8" __cid="cB7ry2y">上拉加载...</span>
+            </div> 
+          </div> 
+        </div> 
+      </div>
+      <div class="text-center panel-body cB7ry2y" bind-visible="$model.paiData.count()==0" __cid="cB7ry2y"> 
+        <h5 class="text-muted cB7ry2y" __cid="cB7ry2y">还没有图片，快来上传吧！</h5> 
+      </div>  
+      <div class="side-bar cB7ry2y" xid="div1" __cid="cB7ry2y"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon uploadbtn cB7ry2y" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:chooseSheetPhoto" data-config="{&quot;icon&quot;:&quot;round round-plus&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cB7ry2y"> 
+          <i xid="i2" class="round round-plus cB7ry2y" style="width:60;" __cid="cB7ry2y"/>  
+          <span xid="span2" __cid="cB7ry2y" class="cB7ry2y"/>
+        </a>
+      </div>
+    </div>  
+    <style __cid="cB7ry2y" class="cB7ry2y">.x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-top {height: 0px;}.x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-content { top: 0px;bottom: nullpx;}.x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p317dd36e707d4ae78acbcb97fbccd04f-iosstatusbar &gt;.x-panel-content {top: 0px;}</style>
+  </div>  
+  <script src="$model/UI2/paitest/native.js" __cid="cB7ry2y" class="cB7ry2y"/>  
+  <script __cid="cB7ry2y" class="cB7ry2y">
+
+var para;
+function OnChoosePhotoCb(datas){
+//alert("OnChoosePhotoCb"+JSON.stringify(datas));
+ var status = datas.result.status,
+		params = datas.result.params;
+			if(status==0){
+			var str_para = JSON.stringify(params);		
+			//alert("upload回调函数OnUploadCb:"+str_para+"status:"+status);
+		//	document.getElementById("tip_choosephoto").style.display = "inline-block";
+			var setting = {
+				"uploadUrl":"http://172.24.141.3:8080/data/",
+				"fileID":params.fileID,
+				"fileName":params.fileName,
+				"taskID":(new Date()).valueOf(),
+				"nativePath":params.nativePath,
+				"ownerID":"001"
+			}
+			NativeInteractive.uploadGivenFile(setting);
+				
+		}
+		
+}
+function OnUploadGivenFileCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+		
+	if(params){
+		var transferStatus = params.transferStatus;
+		if(transferStatus=="Success"){
+			//document.getElementById("tip_choosephoto").style.display = "none";
+			var str_para = JSON.stringify(params);
+		//	alert("OnUploadGivenFileCb 图片已上传:"+str_para);			
+			 userBACK.transParas(params);
+		}
+	}
+	
+}
+</script> </div>

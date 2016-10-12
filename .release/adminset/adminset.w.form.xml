@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window caYJVV3" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="caYJVV3" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/grid/grid,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.caYJVV3{background-color: rgb(57, 58, 62)} .o-img.caYJVV3{width: 100%; height: 80px} .o-imgList.caYJVV3{padding: 14px} .o-imgList.caYJVV3 ul.caYJVV3 li.caYJVV3{padding: 6px} .o-uploadFile.caYJVV3 .x-attachment-content.caYJVV3{min-height: 48px; min-height: 48px; border-top: 0; background: none; margin-top: 0px} .o-uploadFile.caYJVV3 .x-item-upload.caYJVV3{width: 48px; height: 48px; background: url($model/UI2/paitest/img/upload.png) no-repeat center center} .o-uploadFile.caYJVV3 .x-attachment.caYJVV3{min-height: 48px; padding: 0} .o-uploadFile.caYJVV3 .x-attachment.caYJVV3 .x-attachment-cell.caYJVV3{float: none; margin: 0; height: 48px; display: block} .takeout.caYJVV3 .x-col.caYJVV3{padding: 0px} .takeout.caYJVV3 .takeout-list-row.caYJVV3{border-bottom: 1px solid rgb(229, 229, 229)} .takeout.caYJVV3 .x-titlebar.caYJVV3{background-color: rgb(53, 179, 228)}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="caYJVV3" class="caYJVV3"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar caYJVV3" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="caYJVV3"> 
+    <div class="x-panel-top caYJVV3" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="caYJVV3"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar caYJVV3" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;设置&quot;}" __cid="caYJVV3"> 
+        <div class="x-titlebar-left caYJVV3" __cid="caYJVV3"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon caYJVV3" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="caYJVV3"> 
+            <i class="icon-chevron-left caYJVV3" __cid="caYJVV3"/>  
+            <span __cid="caYJVV3" class="caYJVV3"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title caYJVV3" __cid="caYJVV3">设置</div>  
+        <div class="x-titlebar-right  caYJVV3" __cid="caYJVV3">
+          <div class="empty caYJVV3" __cid="caYJVV3"/>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content caYJVV3" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="caYJVV3">
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row caYJVV3" xid="row5" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="caYJVV3"> 
+        <div class="x-col caYJVV3" xid="col14" __cid="caYJVV3"> 
+          <div component="$model/UI2/system/components/justep/row/row" class="x-row caYJVV3" xid="row6" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="caYJVV3"> 
+            <div class="x-col caYJVV3" xid="col17" __cid="caYJVV3">
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default caYJVV3" xid="addBtn1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;paiUser.new&quot;}" data-config="{&quot;label&quot;:&quot;增加&quot;}" __cid="caYJVV3"> 
+                <i xid="i1" __cid="caYJVV3" class="caYJVV3"/>  
+                <span xid="span1" __cid="caYJVV3" class="caYJVV3">增加</span>
+              </a>
+            </div>  
+            <div class="x-col caYJVV3" xid="col18" __cid="caYJVV3">
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default caYJVV3" xid="delBtn2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;paiUser.delete&quot;}" data-config="{&quot;label&quot;:&quot;删除&quot;}" __cid="caYJVV3"> 
+                <i xid="i2" __cid="caYJVV3" class="caYJVV3"/>  
+                <span xid="span2" __cid="caYJVV3" class="caYJVV3">删除</span>
+              </a>
+            </div>  
+            <div class="x-col caYJVV3" xid="col19" __cid="caYJVV3">
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default caYJVV3" xid="saveBtn3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;paiUser.save&quot;}" data-config="{&quot;label&quot;:&quot;保存&quot;}" __cid="caYJVV3"> 
+                <i xid="i3" __cid="caYJVV3" class="caYJVV3"/>  
+                <span xid="span3" __cid="caYJVV3" class="caYJVV3">保存</span>
+              </a>
+            </div>
+          </div>
+        </div>  
+        <div class="x-col caYJVV3" xid="col16" __cid="caYJVV3"/>
+      </div>
+      <ul component="$model/UI2/system/components/justep/list/list" class="x-list x-list-template hide caYJVV3" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="caYJVV3"> 
+        <li xid="li1" __cid="caYJVV3" class="caYJVV3"/>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row caYJVV3" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="caYJVV3"> 
+          <div class="x-col caYJVV3" xid="col1" __cid="caYJVV3">
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row caYJVV3" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="caYJVV3"> 
+              <div class="x-col caYJVV3" xid="col5" __cid="caYJVV3">
+                <input component="$model/UI2/system/components/justep/input/input" class="form-control caYJVV3" xid="input5" data-bind="component:{ref:$model.paiUser.ref(&quot;user_id&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="caYJVV3"/>
+              </div>  
+              <div class="x-col caYJVV3" xid="col6" __cid="caYJVV3">
+                <input component="$model/UI2/system/components/justep/input/input" class="form-control caYJVV3" xid="input6" data-bind="component:{ref:$model.paiUser.ref(&quot;user_name&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="caYJVV3"/>
+              </div>  
+              <div class="x-col caYJVV3" xid="col8" __cid="caYJVV3">
+                <input component="$model/UI2/system/components/justep/input/input" class="form-control caYJVV3" xid="input7" data-bind="component:{ref:$model.paiUser.ref(&quot;user_sex&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="caYJVV3"/>
+              </div>  
+              <div class="x-col caYJVV3" xid="col9" __cid="caYJVV3">
+                <input component="$model/UI2/system/components/justep/input/input" class="form-control caYJVV3" xid="input8" data-bind="component:{ref:$model.paiUser.ref(&quot;admin&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="caYJVV3"/>
+              </div>
+            </div>
+          </div>  
+          <div class="x-col caYJVV3" xid="col2" __cid="caYJVV3"/> 
+        </div>
+      </ul>
+      <xhtml:table xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/grid/grid" hiddenCaptionbar="true" altRows="true" class="x-grid-no-bordered caYJVV3" xid="grid1" data="paiUser" directEdit="true" multiselectWidth="20" multiboxonly="true" showRowNumber="false" useFilterBar="true" multiselect="true" data-config="{&quot;altRows&quot;:true,&quot;colModel&quot;:[{&quot;editable&quot;:true,&quot;name&quot;:&quot;user_id&quot;,&quot;width&quot;:&quot;100&quot;,&quot;xid&quot;:&quot;column5&quot;},{&quot;editable&quot;:true,&quot;name&quot;:&quot;user_name&quot;,&quot;width&quot;:&quot;100&quot;,&quot;xid&quot;:&quot;column6&quot;},{&quot;disableEditorDisplay&quot;:false,&quot;editable&quot;:true,&quot;name&quot;:&quot;user_sex&quot;,&quot;width&quot;:&quot;100&quot;,&quot;xid&quot;:&quot;column7&quot;},{&quot;editable&quot;:true,&quot;name&quot;:&quot;admin&quot;,&quot;width&quot;:&quot;100&quot;,&quot;xid&quot;:&quot;column8&quot;}],&quot;data&quot;:&quot;paiUser&quot;,&quot;directEdit&quot;:true,&quot;editors&quot;:&quot;36DF6B44A8E94FF9B7BD5B41988015DC&quot;,&quot;hiddenCaptionbar&quot;:true,&quot;multiboxonly&quot;:true,&quot;multiselect&quot;:true,&quot;multiselectWidth&quot;:&quot;20&quot;,&quot;rownumbers&quot;:false,&quot;useFilterBar&quot;:true,&quot;width&quot;:&quot;100%&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/grid/grid'}" __cid="caYJVV3"/>  
+      <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" xid="36DF6B44A8E94FF9B7BD5B41988015DC" class="x-grid-editors caYJVV3" bind-with="comp('grid1').getCellEditorsBindingObject()" __cid="caYJVV3">
+        <xhtml:div col="user_id" __cid="caYJVV3" class="caYJVV3">
+          <xhtml:input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit-focusin caYJVV3" data-bind="component:{ref:ref('user_id'),name:'$model/UI2/system/components/justep/input/input'}" __cid="caYJVV3"/>
+        </xhtml:div>
+        <xhtml:div col="user_name" __cid="caYJVV3" class="caYJVV3">
+          <xhtml:input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit-focusin caYJVV3" data-bind="component:{ref:ref('user_name'),name:'$model/UI2/system/components/justep/input/input'}" __cid="caYJVV3"/>
+        </xhtml:div>
+        <xhtml:div xid="editor1" col="user_sex" __cid="caYJVV3" class="caYJVV3"> 
+          <select bind-optionsCaption="'请选择'" class="form-control x-edit-focusin caYJVV3" component="$model/UI2/system/components/justep/select/select" xid="select1" data-bind="component:{ref:ref('user_sex'),name:'$model/UI2/system/components/justep/select/select'}" __cid="caYJVV3"/>
+        </xhtml:div>
+        <xhtml:div col="admin" __cid="caYJVV3" class="caYJVV3">
+          <xhtml:input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit-focusin caYJVV3" data-bind="component:{ref:ref('admin'),name:'$model/UI2/system/components/justep/input/input'}" __cid="caYJVV3"/>
+        </xhtml:div>
+      </xhtml:div>
+    </div>  
+    <style __cid="caYJVV3" class="caYJVV3">.x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p6ade6aab1e1e4fbc875d380b2785187d-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

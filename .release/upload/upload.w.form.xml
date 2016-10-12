@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cvyEnq2" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cvyEnq2" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/attachment/attachmentSimple,$model/UI2/system/components/justep/textarea/textarea,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">p.cvyEnq2{padding: 10px 15px; margin-bottom: 0px} .x-attachment-content.cvyEnq2{border: 0}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cvyEnq2" class="cvyEnq2"/>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar cvyEnq2" xid="panel1" style="background-color:#F2F2F2;" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cvyEnq2"> 
+    <div class="x-panel-top cvyEnq2" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cvyEnq2">
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cvyEnq2" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cvyEnq2"> 
+        <div class="x-titlebar-left cvyEnq2" xid="left1" __cid="cvyEnq2">
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cvyEnq2" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;返回&quot;}" __cid="cvyEnq2"> 
+            <i xid="i1" class="icon-chevron-left cvyEnq2" __cid="cvyEnq2"/>  
+            <span xid="span2" __cid="cvyEnq2" class="cvyEnq2">返回</span>
+          </a>
+        </div>  
+        <div class="x-titlebar-title cvyEnq2" xid="title1" __cid="cvyEnq2">
+          <span xid="span1" __cid="cvyEnq2" class="cvyEnq2">问题反馈</span>
+        </div>  
+        <div class="x-titlebar-right  cvyEnq2" xid="right1" __cid="cvyEnq2">
+          <div class="empty cvyEnq2" __cid="cvyEnq2"/>
+        </div> 
+      </div>
+    </div>  
+    <div class="x-panel-content cvyEnq2" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cvyEnq2">
+      <div xid="div1" __cid="cvyEnq2" class="cvyEnq2">
+        <p xid="p1" style="font-size:medium;" __cid="cvyEnq2" class="cvyEnq2">问题和意见</p>
+      </div>  
+      <ul component="$model/UI2/system/components/justep/list/list" class="x-list x-list-template hide cvyEnq2" xid="list1" bind-foreach="{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;baasData1&quot;}" __cid="cvyEnq2"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cvyEnq2" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cvyEnq2"> 
+          <div class="x-col cvyEnq2" xid="col8" __cid="cvyEnq2">
+            <textarea component="$model/UI2/system/components/justep/textarea/textarea" xid="suggestTextarea" class="form-control cvyEnq2" data-bind="component:{name:'$model/UI2/system/components/justep/textarea/textarea'}" data-config="{&quot;placeHolder&quot;:&quot;请详细描述你的问题或建议。。。&quot;}" __cid="cvyEnq2"/>
+          </div> 
+        </div>
+        <li xid="li1" __cid="cvyEnq2" class="cvyEnq2"/> 
+      </ul>  
+      <div xid="div2" __cid="cvyEnq2" class="cvyEnq2"> 
+        <p xid="p2" style="font-size:medium;" __cid="cvyEnq2" class="cvyEnq2">图片（选填，提供问题截图）</p>
+      </div>  
+      <div component="$model/UI2/system/components/justep/attachment/attachmentSimple" xid="attachmentSimple1" data-bind="component:{name:'$model/UI2/system/components/justep/attachment/attachmentSimple'}" data-config="{&quot;actionUrl&quot;:&quot;/baas/justep/attachment/simpleFileStore&quot;}" __cid="cvyEnq2" class="cvyEnq2"> 
+        <div class="x-attachment cvyEnq2" xid="div3" __cid="cvyEnq2"> 
+          <div class="x-attachment-content x-card-border cvyEnq2" xid="div4" __cid="cvyEnq2"> 
+            <div class="x-doc-process cvyEnq2" xid="div5" __cid="cvyEnq2"> 
+              <div class="progress-bar x-doc-process-bar cvyEnq2" role="progressbar" style="width:0%;" xid="progressBar1" __cid="cvyEnq2"/>
+            </div>  
+            <div data-bind="foreach:$attachmentItems" xid="div6" __cid="cvyEnq2" class="cvyEnq2"> 
+              <div class="x-attachment-cell cvyEnq2" xid="div7" __cid="cvyEnq2"> 
+                <div class="x-attachment-item x-item-other cvyEnq2" data-bind="click:$model.previewOrRemoveItem.bind($model),style:{backgroundImage:($model.previewPicture.bind($model,$object))()}" xid="div8" __cid="cvyEnq2"> 
+                  <a data-bind="visible:$model.$state.get() == 'remove'" class="x-remove-barget cvyEnq2" xid="a1" __cid="cvyEnq2"/>
+                </div> 
+              </div> 
+            </div>  
+            <div class="x-attachment-cell cvyEnq2" data-bind="visible:$state.get() == 'upload'" xid="div9" __cid="cvyEnq2"> 
+              <div class="x-attachment-item x-item-upload cvyEnq2" data-bind="visible:$state.get() == 'upload'" xid="div10" __cid="cvyEnq2"/>
+            </div>  
+            <div class="x-attachment-cell cvyEnq2" data-bind="visible:$state.get() == 'upload' &amp;&amp; $attachmentItems.get().length &gt; 0" xid="div11" __cid="cvyEnq2"> 
+              <div class="x-attachment-item x-item-remove cvyEnq2" data-bind="click:changeState.bind($object,'remove')" xid="div12" __cid="cvyEnq2"/>
+            </div>  
+            <div style="clear:both;" xid="div13" __cid="cvyEnq2" class="cvyEnq2"/>
+          </div> 
+        </div> 
+      </div>  
+      <div xid="div14" __cid="cvyEnq2" class="cvyEnq2"> 
+        <p xid="p3" style="font-size:medium;" __cid="cvyEnq2" class="cvyEnq2">qq邮箱</p>
+      </div>  
+      <input component="$model/UI2/system/components/justep/input/input" class="form-control cvyEnq2" xid="emailInput" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;placeHolder&quot;:&quot;（选填，方便我们联系你）&quot;}" __cid="cvyEnq2"/>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cvyEnq2" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cvyEnq2"> 
+        <div class="x-col cvyEnq2" xid="col1" __cid="cvyEnq2"/>  
+        <div class="x-col x-col-80 cvyEnq2" xid="col2" __cid="cvyEnq2">
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-block cvyEnq2" xid="submitBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;提交&quot;}" __cid="cvyEnq2"> 
+            <i xid="i2" __cid="cvyEnq2" class="cvyEnq2"/>  
+            <span xid="span5" __cid="cvyEnq2" class="cvyEnq2">提交</span>
+          </a>
+        </div>  
+        <div class="x-col cvyEnq2" xid="col3" __cid="cvyEnq2"/>
+      </div>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cvyEnq2" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{&quot;operation&quot;:&quot;baasData1.save&quot;}" data-config="{&quot;label&quot;:&quot;button&quot;}" __cid="cvyEnq2"> 
+        <i xid="i3" __cid="cvyEnq2" class="cvyEnq2"/>  
+        <span xid="span3" __cid="cvyEnq2" class="cvyEnq2"/>
+      </a>  
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list cvyEnq2" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;baasData1&quot;}" __cid="cvyEnq2"> 
+        <ul class="x-list-template hide cvyEnq2" xid="listTemplateUl1" bind-foreach="{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}" __cid="cvyEnq2"> 
+          <li xid="li2" __cid="cvyEnq2" class="cvyEnq2">
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cvyEnq2" xid="row4" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cvyEnq2"> 
+              <div class="x-col cvyEnq2" xid="col10" __cid="cvyEnq2">
+                <input component="$model/UI2/system/components/justep/input/input" class="form-control cvyEnq2" xid="input5" data-bind="component:{ref:ref(&quot;file_id&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="cvyEnq2"/>
+              </div>  
+              <div class="x-col cvyEnq2" xid="col11" __cid="cvyEnq2"/>  
+              <div class="x-col cvyEnq2" xid="col12" __cid="cvyEnq2"/>
+            </div>
+          </li>
+        </ul> 
+      </div>
+    </div>  
+    <style __cid="cvyEnq2" class="cvyEnq2">.x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4454980928ca45f5b7d3f92659ebfe4e-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div>
+</div>

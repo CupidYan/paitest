@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window ciUbuEj" title="会议记录" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="ciUbuEj" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/output/output,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.ciUbuEj{background-color: rgb(57, 58, 62)} .o-img.ciUbuEj{width: 120px; height: 100%} .o-imgList.ciUbuEj{padding: 14px} .o-imgList.ciUbuEj ul.ciUbuEj li.ciUbuEj{padding: 6px} .o-tools.ciUbuEj .btn.ciUbuEj i.ciUbuEj{font-size: 30px} .o-uploadFile.ciUbuEj .x-attachment-content.ciUbuEj{min-height: 48px; min-height: 48px; border-top: 0; background: none; margin-top: 0px} .o-uploadFile.ciUbuEj .x-item-upload.ciUbuEj{width: 48px; height: 48px; background: url($model/UI2/paitest/img/upload.png) no-repeat center center} .o-uploadFile.ciUbuEj .x-attachment.ciUbuEj{min-height: 48px; padding: 0} .o-uploadFile.ciUbuEj .x-attachment.ciUbuEj .x-attachment-cell.ciUbuEj{float: none; margin: 0; height: 48px; display: block} .takeout.ciUbuEj .x-col.ciUbuEj{padding: 0px} .takeout.ciUbuEj .takeout-list-row.ciUbuEj{border-bottom: 1px solid rgb(229, 229, 229)} .takeout.ciUbuEj .x-titlebar.ciUbuEj{background-color: rgb(53, 179, 228)} .uploadbtn.ciUbuEj i.ciUbuEj{font-size: 55px; color: rgb(57, 58, 62)} .side-bar.ciUbuEj{width: 66px; position: fixed; bottom: 20px; right: 25px; font-size: 0; line-height: 0; z-index: 100} .side-bar.ciUbuEj a.ciUbuEj{width: 60px; height: 75px; display: inline-block; margin-bottom: 2px} .fenhang.ciUbuEj{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onActive:modelActive;onLoad:modelLoad" __cid="ciUbuEj" class="ciUbuEj"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar ciUbuEj" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="ciUbuEj"> 
+    <div class="x-panel-content ciUbuEj" xid="content1" _xid="C733E5C941F00001B9947E732FCEF5F0" style="bottom: 0px;" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="ciUbuEj"> 
+      <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full ciUbuEj" xid="contents" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-events="onActiveChange:contentsActiveChange" data-config="{&quot;active&quot;:0,&quot;slidable&quot;:true,&quot;swipe&quot;:true,&quot;wrap&quot;:true}" __cid="ciUbuEj"> 
+        <div class="x-contents-content x-scroll-view active ciUbuEj" xid="picContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="ciUbuEj"> 
+          <div class="x-scroll ciUbuEj" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView2" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" data-config="{&quot;autoPullUp&quot;:false,&quot;pullUpLabel&quot;:&quot;上拉加载...&quot;}" __cid="ciUbuEj"> 
+            <div class="x-content-center x-pull-down container ciUbuEj" xid="div20" __cid="ciUbuEj"> 
+              <i class="x-pull-down-img glyphicon x-icon-pull-down ciUbuEj" xid="i4" __cid="ciUbuEj"/>  
+              <span class="x-pull-down-label ciUbuEj" xid="span7" __cid="ciUbuEj">下拉刷新...</span>
+            </div>  
+            <div class="x-scroll-content ciUbuEj" xid="div18" __cid="ciUbuEj"> 
+              <div component="$model/UI2/system/components/justep/list/list" class="x-list x-cards ciUbuEj" xid="picList" bind-click="imageClick" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;paiData&quot;,&quot;limit&quot;:8}" __cid="ciUbuEj"> 
+                <ul class="x-list-template list-group hide ciUbuEj" xid="listTemplateUl2" bind-foreach="{data:$model.foreach_picList($element),afterRender:$model.foreach_afterRender_picList.bind($model,$element)}" __cid="ciUbuEj"> 
+                  <li xid="li4" class="list-group-item ciUbuEj" __cid="ciUbuEj"> 
+                    <div class="media ciUbuEj" xid="media1" __cid="ciUbuEj"> 
+                      <div class="media-body ciUbuEj" xid="mediaBody1" __cid="ciUbuEj"> 
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row ciUbuEj" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="ciUbuEj"> 
+                          <div class="x-col ciUbuEj" xid="col1" __cid="ciUbuEj">
+                            <div component="$model/UI2/system/components/justep/output/output" xid="output1" style="font-size:medium;font-weight:bold;font-family:方正舒体;font-style:normal;text-decoration:none;color:#000000;" data-bind="component:{ref:ref(&quot;fUserName&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="ciUbuEj" class="ciUbuEj"/>
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row ciUbuEj" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="ciUbuEj"> 
+                          <div component="$model/UI2/system/components/justep/output/output" class="x-output list-group-item-text fenhang ciUbuEj" xid="output3" style="font-family:华文隶书;font-size:medium;text-overflow:ellipsis;" data-bind="component:{ref:ref(&quot;fDescription&quot;),name:'$model/UI2/system/components/justep/output/output'}" __cid="ciUbuEj"/>
+                        </div>
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row ciUbuEj" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="ciUbuEj"> 
+                          <div class="x-col ciUbuEj" xid="col9" __cid="ciUbuEj">
+                            <div xid="div2" style="overflow:hidden;background-repeat:no-repeat;background-position:center center;width:100%;height:200px;" __cid="ciUbuEj" class="ciUbuEj">
+                              <img alt="" xid="image" dir="rtl" bind-attr-src=" val(&quot;fThumb&quot;)" class="media-object ciUbuEj" style="width:100%;" height="auto" __cid="ciUbuEj"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row ciUbuEj" xid="row4" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="ciUbuEj"> 
+                          <div class="x-col ciUbuEj" xid="col3" __cid="ciUbuEj">
+                            <div component="$model/UI2/system/components/justep/output/output" class="x-output list-group-item-text ciUbuEj" xid="output2" style="font-weight:bold;font-family:华文细黑;color:#999;text-align:right;" data-bind="component:{ref:ref(&quot;fCreateTime&quot;),name:'$model/UI2/system/components/justep/output/output'}" data-config="{&quot;format&quot;:&quot;yyyy-MM-dd hh:mm&quot;}" __cid="ciUbuEj"/>
+                          </div>
+                        </div>
+                      </div> 
+                    </div> 
+                  </li> 
+                </ul> 
+              </div>  
+              <input component="$model/UI2/system/components/justep/input/input" class="form-control ciUbuEj" xid="input1" style="visibility:hidden;" data-bind="component:{ref:$model.data.ref(&quot;fileName&quot;),name:'$model/UI2/system/components/justep/input/input'}" __cid="ciUbuEj"/>
+            </div>  
+            <div class="x-content-center x-pull-up ciUbuEj" xid="div17" __cid="ciUbuEj"> 
+              <span class="x-pull-up-label ciUbuEj" xid="span8" __cid="ciUbuEj">上拉加载...</span>
+            </div> 
+          </div> 
+        </div> 
+      </div>
+      <div class="text-center panel-body ciUbuEj" bind-visible="$model.paiData.count()==0" __cid="ciUbuEj"> 
+        <h5 class="text-muted ciUbuEj" __cid="ciUbuEj">还没有图片，快来上传吧！</h5> 
+      </div>  
+      <div class="side-bar ciUbuEj" xid="div1" __cid="ciUbuEj"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon uploadbtn ciUbuEj" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:chooseSheetPhoto" data-config="{&quot;icon&quot;:&quot;round round-plus&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="ciUbuEj"> 
+          <i xid="i1" class="round round-plus ciUbuEj" style="width:60;" __cid="ciUbuEj"/>  
+          <span xid="span1" __cid="ciUbuEj" class="ciUbuEj"/>
+        </a> 
+      </div>
+    </div>  
+    <style __cid="ciUbuEj" class="ciUbuEj">.x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-top {height: 0px;}.x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-content { top: 0px;bottom: nullpx;}.x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pfcf79c7dc83c417c8e8d3fccfca4b21b-iosstatusbar &gt;.x-panel-content {top: 0px;}</style>
+  </div>  
+  <script src="$model/UI2/paitest/native.js" __cid="ciUbuEj" class="ciUbuEj"/>  
+  <script __cid="ciUbuEj" class="ciUbuEj">
+
+var para;
+function OnChoosePhotoCb(datas){
+//alert("OnChoosePhotoCb"+JSON.stringify(datas));
+ var status = datas.result.status,
+		params = datas.result.params;
+			if(status==0){
+			var str_para = JSON.stringify(params);		
+			//alert("upload回调函数OnUploadCb:"+str_para+"status:"+status);
+		//	document.getElementById("tip_choosephoto").style.display = "inline-block";
+			var setting = {
+				"uploadUrl":"http://172.24.141.3:8080/data/",
+				"fileID":params.fileID,
+				"fileName":params.fileName,
+				"taskID":(new Date()).valueOf(),
+				"nativePath":params.nativePath,
+				"ownerID":"001"
+			}
+			NativeInteractive.uploadGivenFile(setting);
+				
+		}
+		
+}
+function OnUploadGivenFileCb(datas){
+	var status = datas.result.status,
+		params = datas.result.params;
+		
+	if(params){
+		var transferStatus = params.transferStatus;
+		if(transferStatus=="Success"){
+			//document.getElementById("tip_choosephoto").style.display = "none";
+			var str_para = JSON.stringify(params);
+			//alert("OnUploadGivenFileCb 图片已上传:"+str_para);			
+			 BACK.transParas(params);
+		}
+	}
+	
+}
+</script> </div>

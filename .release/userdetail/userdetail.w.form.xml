@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cymmUjm" title="会议记录" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cymmUjm" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/bootstrap/row/row,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/popOver/popOver,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/bootstrap/carousel/carousel,$model/UI2/system/components/justep/bar/bar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,$model/UI2/system/components/justep/button/buttonGroup,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.cymmUjm{background-color: rgb(57, 58, 62)} .o-img.cymmUjm{width: 100%} .o-nopadding.cymmUjm{padding: 0} .x-titlebar-right.cymmUjm{padding-right: 15px} .o-tools.cymmUjm{height: 48px; padding-top: 3px; margin-bottom: 15px; background-color: rgb(249, 249, 249); border-top: 1px solid rgba(214, 214, 214, 0.6); border-top: 1px solid rgba(214, 214, 214, 0.6)} .o-tools.cymmUjm .btn.cymmUjm i.cymmUjm{font-size: 24px; color: rgb(57, 58, 62)} .o-toptools.cymmUjm .btn.cymmUjm i.cymmUjm{font-size: 24px; color: rgb(57, 58, 62)} .o-information.cymmUjm{display: none; background-color: rgb(255, 255, 255); color: rgb(33, 33, 33)} .o-information.cymmUjm &gt; div.cymmUjm{margin-bottom: 10px} .o-information.cymmUjm .o-edit.cymmUjm{color: rgb(47, 164, 231); margin-left: 10px} .o-editDescription.cymmUjm{display: none; height: 40px; padding-top: 3px; background-color: rgb(254, 254, 254)} .o-editDescription.cymmUjm .o-input.cymmUjm{height: 32px; padding-left: 0; background: none; border: none; box-shadow: none; border-radius: 0; border-bottom: 1px solid rgb(223, 223, 223)} .o-editDescription.cymmUjm .o-input.cymmUjm:focus{border-bottom: 1px solid rgb(75, 185, 34)} .o-editDescription.cymmUjm .o-saveBtn.cymmUjm{padding: 6px; margin-top: 3px; color: rgb(255, 255, 255); font-size: 12px; background-color: rgb(69, 192, 24); border-radius: 3px} .x-bar.cymmUjm{padding-left: 12px; border-bottom: 0} .x-popOver-overlay.cymmUjm{background-color: rgb(0, 0, 0)} .o-delContent.cymmUjm{width: 270px; height: 100px; background-color: rgb(255, 255, 255); position: relative} .o-delContent.cymmUjm .btn[xid="delBtn"].cymmUjm{position: absolute; bottom: 10px; right: 80px} .o-delContent.cymmUjm .btn[xid="cancelBtn"].cymmUjm{position: absolute; bottom: 10px; right: 10px} .side-barright.cymmUjm{width: 66px; position: fixed; bottom: 45%; right: 10px; font-size: 0; line-height: 0; z-index: 100} .side-barright.cymmUjm a.cymmUjm{width: 66px; height: 66px; display: inline-block; margin-bottom: 2px} .side-barright.cymmUjm .btn.cymmUjm i.cymmUjm{font-size: 24px; color: rgb(207, 207, 207)} .side-barleft.cymmUjm{width: 66px; position: fixed; bottom: 45%; left: 10px; font-size: 0; line-height: 0; z-index: 100} .side-barleft.cymmUjm a.cymmUjm{width: 66px; height: 66px; display: inline-block; margin-bottom: 2px} .side-barleft.cymmUjm .btn.cymmUjm i.cymmUjm{font-size: 24px; color: rgb(207, 207, 207)}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onInactive:modelInactive;onParamsReceive:modelParamsReceive" __cid="cymmUjm" class="cymmUjm"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p533c75f237d542eab7048df2227f31a0-iosstatusbar cymmUjm" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cymmUjm"> 
+    <div class="x-panel-content cymmUjm" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cymmUjm"> 
+      <div component="$model/UI2/system/components/bootstrap/carousel/carousel" class="x-carousel cymmUjm" xid="carousel1" style="height:100%;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/carousel/carousel'}" data-config="{&quot;supportImagePinch&quot;:true}" __cid="cymmUjm"> 
+        <div class="x-contents carousel-inner cymmUjm" role="listbox" component="$model/UI2/system/components/justep/contents/contents" xid="contents1" style="height:100%;" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0,&quot;routable&quot;:false,&quot;slidable&quot;:true,&quot;swipe&quot;:true,&quot;wrap&quot;:true}" __cid="cymmUjm"> 
+          <div class="x-contents-content active cymmUjm" xid="content2" style="height:100%;overflow:auto;" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cymmUjm"> 
+            <img src="" alt="" xid="pinch" id="pinch" class="o-img cymmUjm" bind-click="informationBtnClick" __cid="cymmUjm"/>
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom cymmUjm" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" data-config="{&quot;height&quot;:48}" __cid="cymmUjm"> 
+      <div class="panel-body o-information cymmUjm" xid="div6" __cid="cymmUjm"> 
+        <div xid="div7" __cid="cymmUjm" class="cymmUjm"> 
+          <span xid="span16" __cid="cymmUjm" class="cymmUjm">上传者：</span>  
+          <span bind-text="paiData.ref('fUserName')" xid="span17" __cid="cymmUjm" class="cymmUjm"/> 
+        </div>  
+        <div xid="div9" __cid="cymmUjm" class="cymmUjm"> 
+          <span xid="span20" __cid="cymmUjm" class="cymmUjm">描述：</span>  
+          <span bind-text="paiData.ref('fDescription')" class="o-description cymmUjm" xid="span21" __cid="cymmUjm"/>  
+          <span xid="edit" class="o-edit cymmUjm" bind-click="editClick" __cid="cymmUjm">编辑</span>  
+          <div component="$model/UI2/system/components/bootstrap/row/row" class="row o-nopadding o-editDescription cymmUjm" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cymmUjm"> 
+            <div class="col col-xs-2 o-nopadding text-center cymmUjm" xid="col1" __cid="cymmUjm"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cymmUjm" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-edit&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cymmUjm"> 
+                <i xid="i2" class="icon-edit text-muted cymmUjm" __cid="cymmUjm"/>  
+                <span xid="span3" __cid="cymmUjm" class="cymmUjm"/> 
+              </a> 
+            </div>  
+            <div class="col col-xs-8 o-nopadding cymmUjm" xid="col2" __cid="cymmUjm"> 
+              <input component="$model/UI2/system/components/justep/input/input" class="form-control o-input cymmUjm" xid="input" onfocus="this.select()" data-bind="component:{ref:paiData.ref('fDescription'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;placeHolder&quot;:&quot;请输入图片描述&quot;}" __cid="cymmUjm"/> 
+            </div>  
+            <div class="col col-xs-2 o-nopadding text-center cymmUjm" xid="col3" __cid="cymmUjm"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-only-label o-saveBtn cymmUjm" xid="okBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:okBtnClick" data-config="{&quot;label&quot;:&quot;保存&quot;}" __cid="cymmUjm"> 
+                <i xid="i8" __cid="cymmUjm" class="cymmUjm"/>  
+                <span xid="span5" __cid="cymmUjm" class="cymmUjm">保存</span> 
+              </a> 
+            </div> 
+          </div>  
+          <div class="clearfix cymmUjm" __cid="cymmUjm"/> 
+        </div>  
+        <div xid="div8" __cid="cymmUjm" class="cymmUjm"> 
+          <span xid="span18" __cid="cymmUjm" class="cymmUjm">上传时间：</span>  
+          <span bind-text="paiData.ref('fCreateTime')" xid="span19" __cid="cymmUjm" class="cymmUjm"/> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified o-tools cymmUjm" xid="buttonGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/button/buttonGroup'}" data-config="{&quot;tabbed&quot;:true}" __cid="cymmUjm"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cymmUjm" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cymmUjm"> 
+          <i class="icon-chevron-left cymmUjm" __cid="cymmUjm"/>  
+          <span __cid="cymmUjm" class="cymmUjm"/> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cymmUjm" xid="delOpen" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:delOpenClick" data-config="{&quot;icon&quot;:&quot;icon-ios7-trash-outline&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cymmUjm"> 
+          <i class="icon-ios7-trash-outline cymmUjm" xid="i5" __cid="cymmUjm"/>  
+          <span xid="span14" __cid="cymmUjm" class="cymmUjm"/> 
+        </a> 
+      </div> 
+    </div>  
+    <style __cid="cymmUjm" class="cymmUjm">.x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-top {height: 0px;}.x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-content { top: 0px;bottom: 48px;}.x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-bottom {height: 48px;}.iosstatusbar .x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p533c75f237d542eab7048df2227f31a0-iosstatusbar &gt;.x-panel-content {top: 0px;}</style>
+  </div>  
+  <div component="$model/UI2/system/components/justep/popOver/popOver" class="x-popOver cymmUjm" xid="delPopOver" data-bind="component:{name:'$model/UI2/system/components/justep/popOver/popOver'}" data-config="{&quot;opacity&quot;:0.7}" __cid="cymmUjm"> 
+    <div class="x-popOver-overlay cymmUjm" xid="div1" dir="ltr" __cid="cymmUjm"/>  
+    <div class="x-popOver-content cymmUjm" xid="div2" __cid="cymmUjm">
+      <div component="$model/UI2/system/components/justep/bar/bar" class="x-titlebar x-bar cymmUjm" xid="bar1" bind-html="'提示信息'" data-bind="component:{name:'$model/UI2/system/components/justep/bar/bar'}" __cid="cymmUjm"/>  
+      <div xid="div3" class="panel-body o-delContent cymmUjm" __cid="cymmUjm">
+        <span xid="span8" __cid="cymmUjm" class="cymmUjm">确定删除？</span>
+        <a component="$model/UI2/system/components/justep/button/button" class="btn x-green cymmUjm" xid="delBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:delBtnClick" data-config="{&quot;label&quot;:&quot;确定&quot;}" __cid="cymmUjm"> 
+          <i xid="i9" __cid="cymmUjm" class="cymmUjm"/>  
+          <span xid="span6" __cid="cymmUjm" class="cymmUjm">确定</span>
+        </a>
+        <a component="$model/UI2/system/components/justep/button/button" class="btn x-gray cymmUjm" xid="cancelBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:cancelBtnClick" data-config="{&quot;label&quot;:&quot;取消&quot;}" __cid="cymmUjm"> 
+          <i xid="i10" __cid="cymmUjm" class="cymmUjm"/>  
+          <span xid="span7" class="text-muted cymmUjm" __cid="cymmUjm">取消</span>
+        </a>
+      </div> 
+    </div>
+  </div>  
+  <div class="side-barleft cymmUjm" xid="div1" __cid="cymmUjm"> 
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cymmUjm" xid="button3" style="width:55px;height:51px;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:leftBtnClick" data-config="{&quot;icon&quot;:&quot;linear linear-volumehigh&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cymmUjm"> 
+      <i xid="i4" class="linear linear-volumehigh cymmUjm" __cid="cymmUjm"/>  
+      <span xid="span3" __cid="cymmUjm" class="cymmUjm"/>
+    </a> 
+  </div>  
+  <div class="side-barright cymmUjm" __cid="cymmUjm"> 
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cymmUjm" xid="button2" style="height:51px;width:55px;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:rightBtnClick" data-config="{&quot;icon&quot;:&quot;dataControl dataControl-arrowrightl&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cymmUjm"> 
+      <i xid="i2" class="dataControl dataControl-arrowrightl cymmUjm" __cid="cymmUjm"/>  
+      <span xid="span2" __cid="cymmUjm" class="cymmUjm"/>
+    </a>
+  </div> 
+</div>
