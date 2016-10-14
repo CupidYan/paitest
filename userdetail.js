@@ -12,6 +12,20 @@ define(function(require) {
 		this.paiData;
 		this.bottomHeight;
 		window.models["detail"] = this;
+		var hammertime = new Hammer(document.getElementById("swipe"));
+		hammertime.on("swipeleft", function (e) {
+		var detail = models["detail"];
+    	detail.rightBtnClick();
+//        alert("233");
+		});
+		hammertime.on("swiperight", function (e) {
+//       alert("333");
+    	var detail = models["detail"];
+        detail.leftBtnClick();
+//        detail.dataRefresh();
+//		detail.paiData.pre();
+//		$(".o-img", detail.getRootNode()).attr("src", detail.paiData.getValue("fPreviewPath"));
+		});
 	};
 	// 接收参数
 	Model.prototype.modelParamsReceive = function(event) {
@@ -199,20 +213,6 @@ define(function(require) {
 		 this.paiData.setFilter('filter1', "fOwner like '" + this.params.user_id + "'");
 		 this.paiData.refreshData();
 	};
-	 //创建一个新的hammer对象并且在初始化时指定要处理的dom元素
-    var hammertime = new Hammer(document.getElementById("swipe"));
-        //添加事件
-    hammertime.on("swipeleft", function (e) {
-    
-    var detail = models["detail"];
-    	detail.rightBtnClick();
-//        alert("233");
-    });
-    hammertime.on("swiperight", function (e) {
- //       alert("333");
-    	var detail = models["detail"];
-        detail.leftBtnClick();
-    });
 
 	return Model;
 });
